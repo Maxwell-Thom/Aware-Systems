@@ -9,9 +9,12 @@
 import UIKit
 
 class homeCell: UITableViewCell {
-
+    //declare variables (give these variables better names! they are used in both sensors and hubs)
     @IBOutlet weak var hubName: UILabel!
+    
     @IBOutlet weak var hubStatus: UILabel!
-   // @IBOutlet weak var sensorName: UILabel!
-   // @IBOutlet weak var sensorStatus: UILabel!
+
+    @IBOutlet weak var sensorReception: UIImageView!
+    
+    @IBOutlet weak var sensorBattery: UIImageView!
 }
