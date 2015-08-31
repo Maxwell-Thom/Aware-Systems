@@ -45,12 +45,11 @@ class locationController: UIViewController, UIPickerViewDataSource, UIPickerView
                         self.pickerData.append(description)
                         self.status.append(status)
                         self.selectedHub.append(hubId!)
-                        println(self.selectedHub)
                         self.locationPicker.reloadAllComponents()
                         SingletonB.sharedInstance.hubSelected = self.selectedHub[0]
                         if(self.status[0] == true){
                             self.hubStatus.text = "Online"
-                            self.hubStatus.textColor = UIColor.greenColor()
+                            self.hubStatus.textColor = UIColor( red: 0/255, green: 255/255, blue:111/255, alpha: 1.0 )
                         }
                         else if (self.status[0] == false){
                             self.hubStatus.text = "Offline"
@@ -88,15 +87,22 @@ class locationController: UIViewController, UIPickerViewDataSource, UIPickerView
         return pickerData[row] as String
     }
     
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
+        let pickerLabel = UILabel()
+        let titleData = pickerData[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Avenir Next Medium", size: 26.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
+        pickerLabel.attributedText = myTitle
+        return pickerLabel
+    }
+    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         SingletonB.sharedInstance.hubSelected = self.selectedHub[row] as String
-        println("the hub selected is:", self.selectedHub[row] as String )
         self.parentViewController?.viewDidLoad()
         
         if(self.status[row] == true){
             self.hubStatus.text = "Online"
-            self.hubStatus.textColor = UIColor.greenColor()
+            self.hubStatus.textColor = UIColor( red: 24/255, green: 166/255, blue:79/255, alpha: 1.0 )
         }
         else if (self.status[row] == false){
             self.hubStatus.text = "Offline"

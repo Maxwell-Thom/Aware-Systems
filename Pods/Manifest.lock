@@ -1,1 +1,10 @@
-COCOAPODS: 0.37.2
+PODS:
+  - PullToBounce (0.0.2)
+
+DEPENDENCIES:
+  - PullToBounce
+
+SPEC CHECKSUMS:
+  PullToBounce: 3c0d72463522e75fb00bd754c354e5b464ec5fd3
+
+COCOAPODS: 0.38.2

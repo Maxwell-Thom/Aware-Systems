@@ -14,7 +14,7 @@ class SingletonB {
     var sensorIdPayload = ""
     var hubSelected: String = ""
     var sensorSelected: String = ""
-    
+    var newsName: String = ""
     class var sharedInstance : SingletonB {
         struct Static {
             static let instance : SingletonB = SingletonB()

@@ -8,11 +8,15 @@
 
 import UIKit
 import Parse
+import QuartzCore
 
 class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //declare variables
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var newsFeedLabel: UILabel!
+    
+
     
     var rows: Int = 0
     var sensorId: String = ""
@@ -23,10 +27,16 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var selectedSensorId: [String] = []
     var sensorReception: [Int] = []
     var sensorBattery: [Int] = []
+    var sensorMovement: [Bool] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
+        tableView.addSubview(refreshControl)
+        
         //call dataquery and populate view upon loading
         self.rows = 0
         self.sensorId = ""
@@ -37,22 +47,22 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
         self.selectedSensorId.removeAll(keepCapacity: false)
         self.sensorReception.removeAll(keepCapacity: false)
         self.sensorBattery.removeAll(keepCapacity: false)
+        self.sensorMovement.removeAll(keepCapacity: false)
         
         self.dataQuery()
         
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableData:", name: "reload", object: nil)
+        
+        let rectShape = CAShapeLayer()
+        rectShape.path = UIBezierPath(roundedRect: self.newsFeedLabel.bounds, byRoundingCorners: .TopLeft | .TopRight, cornerRadii: CGSize(width: 14, height: 14)).CGPath
+         self.newsFeedLabel.layer.mask = rectShape
+        
+        self.tableView.separatorColor = UIColor( red: 75/255, green: 168/255, blue:222/255, alpha: 1.0 )
+        
     }
     
-    //back button actions
-    @IBAction func backbutton(sender: AnyObject) {
-        
-        //the following code resets all elements related to loading the view
-        self.rows = 0
-        self.sensorId = ""
-        self.sensorDescription.removeAll(keepCapacity: false)
-        self.relatedSensors.removeAll(keepCapacity: false)
-        self.hubSelectionLoader = ""
-        
+    func refresh(refreshControl: UIRefreshControl) {
+        viewDidLoad()
+        refreshControl.endRefreshing()
     }
     
     //specify number of rows in table view
@@ -78,8 +88,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
             //set text
             cell.hubStatus.text = "Armed"
             //set color
-            cell.hubStatus.textColor = UIColor.greenColor()
-
+            cell.hubStatus.textColor = UIColor( red: 0/255, green: 255/255, blue:111/255, alpha: 1.0 )
         }
         
         else if (self.sensorStatus[indexPath.row] == false)
@@ -127,7 +136,9 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
         
         
-        //return the resulting cell
+        cell.sensorImage.layer.cornerRadius = 10
+        
+        
         return cell
     }
     
@@ -164,7 +175,6 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 (success: Bool, error: NSError?) -> Void in
                 if (success) {
                 // The object has been saved.
-                    println("saved!")
                 } else {
                     
                 // There was a problem, check error.description
@@ -193,7 +203,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                     (success: Bool, error: NSError?) -> Void in
                     if (success) {
                         // The object has been saved.
-                        println("saved!")
+
                     } else {
                         // There was a problem, check error.description
                     }
@@ -251,6 +261,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                             //set variables to be extracted from dictionary
                             let description = queryArr[counter].valueForKey("sensor_description") as! String
                             let status = queryArr[counter].valueForKey("arm_disarm") as! Bool
+                            let movement = queryArr[counter].valueForKey("movement_flag") as! Bool
                             let sensorId = queryArr[counter].valueForKey("objectId") as! String
                             let reception = queryArr[counter].valueForKey("reception") as! Int
                             let battery = queryArr[counter].valueForKey("battery") as! Int
@@ -260,6 +271,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                             self.selectedSensorId.append(sensorId)
                             self.sensorReception.append(reception)
                             self.sensorBattery.append(battery)
+                            self.sensorMovement.append(movement)
                             //increment counter
                             counter = counter+1
                             
@@ -267,65 +279,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                         
                     }
                     //reload table with new data
-                    println(self.sensorStatus)
                     self.tableView.reloadData()
-                }
-            }
-                
-            else {
-                // Log details of the failure
-                println("Error: \(error!) \(error!.userInfo!)")
-            }
-        }
-    }
-    
-    func reloadTableData() {
-        self.hubSelectionLoader = SingletonB.sharedInstance.hubSelected
-        var counter: Int = 0
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //specify class
-        var testQuery = PFQuery(className: "hubs")
-        //specify which hub
-        testQuery.whereKey("objectId", equalTo: self.hubSelectionLoader)
-        // include relational array
-        testQuery.includeKey("Sensors")
-        // get query
-        testQuery.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]?, error: NSError?) -> Void in
-            if error == nil {
-                // The find succeeded.
-                // Do something with the found objects
-                if let objects = objects as? [PFObject] {
-                    
-                    for object in objects {
-                        //load array from query as nsarray
-                        var queryArr = object["Sensors"] as! NSArray
-                        //count the array for loop and table size
-                        var loopCount = queryArr.count
-                        self.rows = loopCount
-                        //loop through queryArr
-                        while(counter < loopCount){
-                            //set variables to be extracted from dictionary
-                            let description = queryArr[counter].valueForKey("sensor_description") as! String
-                            let status = queryArr[counter].valueForKey("arm_disarm") as! Bool
-                            let sensorId = queryArr[counter].valueForKey("objectId") as! String
-                            let reception = queryArr[counter].valueForKey("reception") as! Int
-                            let battery = queryArr[counter].valueForKey("battery") as! Int
-                            //put variables into external variables for later use
-                            self.sensorDescription.append(description)
-                            self.sensorStatus.append(status)
-                            self.selectedSensorId.append(sensorId)
-                            self.sensorReception.append(reception)
-                            self.sensorBattery.append(battery)
-                            //increment counter
-                            counter = counter+1
-                            
-                        }
-                        
-                    }
-                    //reload table with new data
-                    println(self.sensorStatus)
                 }
             }
                 

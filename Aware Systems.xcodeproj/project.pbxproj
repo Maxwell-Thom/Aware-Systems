@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BB395BEC6D27C7324858EAB /* Pods_Aware_Systems.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10A6AD06A3AF2D5CDD77480 /* Pods_Aware_Systems.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CF1232D51B27B14600CAE3F9 /* homeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1232D41B27B14600CAE3F9 /* homeCell.swift */; };
-		CF1232D91B27B1A100CAE3F9 /* homeHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1232D81B27B1A100CAE3F9 /* homeHub.swift */; };
 		CF1232DB1B27BDC100CAE3F9 /* sensorsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1232DA1B27BDC100CAE3F9 /* sensorsHome.swift */; };
 		CF1232DF1B2F5B4200CAE3F9 /* sensorZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1232DE1B2F5B4200CAE3F9 /* sensorZoom.swift */; };
 		CF374F861B2785E400B6514E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F801B2785E400B6514E /* Bolts.framework */; };
@@ -25,12 +25,16 @@
 		CF374FA11B2786FA00B6514E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374FA01B2786FA00B6514E /* libsqlite3.dylib */; };
 		CF374FA31B27870500B6514E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374FA21B27870500B6514E /* Accounts.framework */; };
 		CF374FA51B27870F00B6514E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374FA41B27870F00B6514E /* Social.framework */; };
+		CF58E8581B93B3C700CACB55 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F811B2785E400B6514E /* Parse.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CF58E85A1B93CE8700CACB55 /* noNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58E8591B93CE8700CACB55 /* noNews.swift */; };
 		CF73F2101B0FAF460092A73C /* createAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F20F1B0FAF460092A73C /* createAccountVC.swift */; };
 		CF73F2121B0FAFB60092A73C /* BoilerPlate UIKit class.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F2111B0FAFB60092A73C /* BoilerPlate UIKit class.swift */; };
 		CF73F2151B13E2F50092A73C /* accountCreationSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F2141B13E2F50092A73C /* accountCreationSuccess.swift */; };
 		CF73F21F1B14D0F30092A73C /* addHubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F21E1B14D0F30092A73C /* addHubVC.swift */; };
 		CF73F2221B14E5530092A73C /* wifiSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F2211B14E5530092A73C /* wifiSetup.swift */; };
 		CF73F2261B163DDD0092A73C /* shareWifi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F2251B163DDD0092A73C /* shareWifi.swift */; };
+		CF96B85E1B8A864B0008B055 /* pageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF96B85D1B8A864B0008B055 /* pageController.swift */; };
+		CF96B8661B8BAEB60008B055 /* newsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF96B8651B8BAEB60008B055 /* newsFeed.swift */; };
 		CFB806221B7A7BCE00CC6249 /* Empty Battery-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806211B7A7BCE00CC6249 /* Empty Battery-32.png */; };
 		CFB806241B7A7BD900CC6249 /* Full Battery-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806231B7A7BD900CC6249 /* Full Battery-32.png */; };
 		CFB806261B7A7BE300CC6249 /* Charged Battery-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806251B7A7BE300CC6249 /* Charged Battery-32.png */; };
@@ -40,7 +44,6 @@
 		CFB8062E1B7A877A00CC6249 /* Wi-Fi-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB8062D1B7A877A00CC6249 /* Wi-Fi-32.png */; };
 		CFB806661B810A9C00CC6249 /* locationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB806651B810A9C00CC6249 /* locationController.swift */; };
 		CFB806681B826D4A00CC6249 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB806671B826D4A00CC6249 /* Images-2.xcassets */; };
-		CFB806701B865C3000CC6249 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F811B2785E400B6514E /* Parse.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CFB806741B868C0600CC6249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB806731B868C0600CC6249 /* Main.storyboard */; };
 		CFC03D7B1B0E6AA700A7CE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC03D7A1B0E6AA700A7CE6B /* AppDelegate.swift */; };
 		CFC03D7D1B0E6AA700A7CE6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC03D7C1B0E6AA700A7CE6B /* ViewController.swift */; };
@@ -62,8 +65,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		345913B2789CA3D2712A720B /* Pods-Aware Systems.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aware Systems.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aware Systems/Pods-Aware Systems.debug.xcconfig"; sourceTree = "<group>"; };
+		35A459F0AB608743C210CF88 /* Pods-Aware Systems.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aware Systems.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aware Systems/Pods-Aware Systems.release.xcconfig"; sourceTree = "<group>"; };
 		CF1232D41B27B14600CAE3F9 /* homeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeCell.swift; sourceTree = "<group>"; };
-		CF1232D81B27B1A100CAE3F9 /* homeHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeHub.swift; sourceTree = "<group>"; };
 		CF1232DA1B27BDC100CAE3F9 /* sensorsHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sensorsHome.swift; sourceTree = "<group>"; };
 		CF1232DE1B2F5B4200CAE3F9 /* sensorZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sensorZoom.swift; sourceTree = "<group>"; };
 		CF374F801B2785E400B6514E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Aware Systems/Bolts.framework"; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 		CF374FA01B2786FA00B6514E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CF374FA21B27870500B6514E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CF374FA41B27870F00B6514E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CF58E8591B93CE8700CACB55 /* noNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noNews.swift; sourceTree = "<group>"; };
 		CF73F20F1B0FAF460092A73C /* createAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createAccountVC.swift; sourceTree = "<group>"; };
 		CF73F2111B0FAFB60092A73C /* BoilerPlate UIKit class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BoilerPlate UIKit class.swift"; path = "../Aware Systems/BoilerPlate UIKit class.swift"; sourceTree = "<group>"; };
 		CF73F2141B13E2F50092A73C /* accountCreationSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountCreationSuccess.swift; sourceTree = "<group>"; };
@@ -88,6 +93,8 @@
 		CF73F21E1B14D0F30092A73C /* addHubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHubVC.swift; sourceTree = "<group>"; };
 		CF73F2211B14E5530092A73C /* wifiSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wifiSetup.swift; sourceTree = "<group>"; };
 		CF73F2251B163DDD0092A73C /* shareWifi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shareWifi.swift; sourceTree = "<group>"; };
+		CF96B85D1B8A864B0008B055 /* pageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pageController.swift; sourceTree = "<group>"; };
+		CF96B8651B8BAEB60008B055 /* newsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeed.swift; sourceTree = "<group>"; };
 		CFA3863E1B2795ED008A872A /* Aware Systems-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aware Systems-Bridging-Header.h"; sourceTree = "<group>"; };
 		CFB806211B7A7BCE00CC6249 /* Empty Battery-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Empty Battery-32.png"; path = "../../../../Downloads/Empty Battery-32.png"; sourceTree = "<group>"; };
 		CFB806231B7A7BD900CC6249 /* Full Battery-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Full Battery-32.png"; path = "../../../../Downloads/Full Battery-32.png"; sourceTree = "<group>"; };
@@ -111,6 +118,7 @@
 		CFC7DC821B72F41100BBDE2B /* sensorDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sensorDetails.swift; sourceTree = "<group>"; };
 		CFE22B401B39E07300C7E58A /* dataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataManager.swift; sourceTree = "<group>"; };
 		CFEA46C71B1D402F0042D996 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = "../Aware Systems/Podfile"; sourceTree = "<group>"; };
+		E10A6AD06A3AF2D5CDD77480 /* Pods_Aware_Systems.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aware_Systems.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +135,13 @@
 				CF374F991B2786AE00B6514E /* Security.framework in Frameworks */,
 				CF374F971B2786A200B6514E /* QuartzCore.framework in Frameworks */,
 				CF374F951B27869700B6514E /* MobileCoreServices.framework in Frameworks */,
-				CFB806701B865C3000CC6249 /* Parse.framework in Frameworks */,
 				CF374F931B27868C00B6514E /* CoreLocation.framework in Frameworks */,
+				CF58E8581B93B3C700CACB55 /* Parse.framework in Frameworks */,
 				CF374F861B2785E400B6514E /* Bolts.framework in Frameworks */,
 				CF374F911B27867E00B6514E /* CoreGraphics.framework in Frameworks */,
 				CF374F8F1B27867400B6514E /* CFNetwork.framework in Frameworks */,
 				CF374F8D1B27866700B6514E /* AudioToolbox.framework in Frameworks */,
+				0BB395BEC6D27C7324858EAB /* Pods_Aware_Systems.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +155,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90F6E09E606359C52EDCFD75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				345913B2789CA3D2712A720B /* Pods-Aware Systems.debug.xcconfig */,
+				35A459F0AB608743C210CF88 /* Pods-Aware Systems.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CA1AC65EBCF45891E303B3D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,8 +182,16 @@
 				CF374F8C1B27866700B6514E /* AudioToolbox.framework */,
 				CF374F801B2785E400B6514E /* Bolts.framework */,
 				CF374F811B2785E400B6514E /* Parse.framework */,
+				E10A6AD06A3AF2D5CDD77480 /* Pods_Aware_Systems.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF15B9941B9302F7006297E0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		CF73F20E1B0FAEF90092A73C /* SettingVCs */ = {
@@ -201,12 +227,14 @@
 		CF98F42F1B1D6AE800BCA01C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CF1232D81B27B1A100CAE3F9 /* homeHub.swift */,
 				CF1232DA1B27BDC100CAE3F9 /* sensorsHome.swift */,
+				CFB806651B810A9C00CC6249 /* locationController.swift */,
 				CF1232D41B27B14600CAE3F9 /* homeCell.swift */,
 				CFC7DC821B72F41100BBDE2B /* sensorDetails.swift */,
 				CF1232DE1B2F5B4200CAE3F9 /* sensorZoom.swift */,
-				CFB806651B810A9C00CC6249 /* locationController.swift */,
+				CF96B85D1B8A864B0008B055 /* pageController.swift */,
+				CF96B8651B8BAEB60008B055 /* newsFeed.swift */,
+				CF58E8591B93CE8700CACB55 /* noNews.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -228,10 +256,12 @@
 		CFC03D6C1B0E6AA700A7CE6B = {
 			isa = PBXGroup;
 			children = (
+				CF15B9941B9302F7006297E0 /* New Group */,
 				CFC03D771B0E6AA700A7CE6B /* Aware Systems */,
 				CFC03D8D1B0E6AA800A7CE6B /* Aware SystemsTests */,
 				CFC03D761B0E6AA700A7CE6B /* Products */,
 				CA1AC65EBCF45891E303B3D3 /* Frameworks */,
+				90F6E09E606359C52EDCFD75 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -296,9 +326,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFC03D941B0E6AA800A7CE6B /* Build configuration list for PBXNativeTarget "Aware Systems" */;
 			buildPhases = (
+				E22CD83800DA7D3D43D7E96F /* Check Pods Manifest.lock */,
 				CFC03D711B0E6AA700A7CE6B /* Sources */,
 				CFC03D721B0E6AA700A7CE6B /* Frameworks */,
 				CFC03D731B0E6AA700A7CE6B /* Resources */,
+				0FBADCF3FC940BA8A1249BBF /* Embed Pods Frameworks */,
+				39C7544DEDFA2BB2285C61B7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -397,6 +430,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FBADCF3FC940BA8A1249BBF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aware Systems/Pods-Aware Systems-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39C7544DEDFA2BB2285C61B7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aware Systems/Pods-Aware Systems-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E22CD83800DA7D3D43D7E96F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFC03D711B0E6AA700A7CE6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -404,11 +485,12 @@
 			files = (
 				CFB806661B810A9C00CC6249 /* locationController.swift in Sources */,
 				CFC7DC831B72F41200BBDE2B /* sensorDetails.swift in Sources */,
-				CF1232D91B27B1A100CAE3F9 /* homeHub.swift in Sources */,
 				CF73F2221B14E5530092A73C /* wifiSetup.swift in Sources */,
 				CF73F2151B13E2F50092A73C /* accountCreationSuccess.swift in Sources */,
 				CFC03D7D1B0E6AA700A7CE6B /* ViewController.swift in Sources */,
 				CF73F21F1B14D0F30092A73C /* addHubVC.swift in Sources */,
+				CF96B85E1B8A864B0008B055 /* pageController.swift in Sources */,
+				CF58E85A1B93CE8700CACB55 /* noNews.swift in Sources */,
 				CFE22B411B39E07300C7E58A /* dataManager.swift in Sources */,
 				CF1232D51B27B14600CAE3F9 /* homeCell.swift in Sources */,
 				CF1232DB1B27BDC100CAE3F9 /* sensorsHome.swift in Sources */,
@@ -416,6 +498,7 @@
 				CFC03D7B1B0E6AA700A7CE6B /* AppDelegate.swift in Sources */,
 				CF73F2101B0FAF460092A73C /* createAccountVC.swift in Sources */,
 				CF73F2261B163DDD0092A73C /* shareWifi.swift in Sources */,
+				CF96B8661B8BAEB60008B055 /* newsFeed.swift in Sources */,
 				CFC03D9D1B0E751A00A7CE6B /* settingsCell.swift in Sources */,
 				CF73F2121B0FAFB60092A73C /* BoilerPlate UIKit class.swift in Sources */,
 			);
@@ -536,6 +619,7 @@
 		};
 		CFC03D951B0E6AA800A7CE6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 345913B2789CA3D2712A720B /* Pods-Aware Systems.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -589,8 +673,25 @@
 					Systems,
 					"$(PROJECT_DIR)/Aware",
 					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
 				);
 				INFOPLIST_FILE = "Aware Systems/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -601,6 +702,7 @@
 		};
 		CFC03D961B0E6AA800A7CE6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35A459F0AB608743C210CF88 /* Pods-Aware Systems.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -654,8 +756,25 @@
 					Systems,
 					"$(PROJECT_DIR)/Aware",
 					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
 				);
 				INFOPLIST_FILE = "Aware Systems/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

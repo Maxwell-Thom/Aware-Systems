@@ -16,5 +16,7 @@ class homeCell: UITableViewCell {
 
     @IBOutlet weak var sensorReception: UIImageView!
     
+    @IBOutlet weak var sensorImage: UIImageView!
+    
     @IBOutlet weak var sensorBattery: UIImageView!
 }

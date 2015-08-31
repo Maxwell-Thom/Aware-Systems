@@ -51,7 +51,7 @@ class sensorZoom: UIViewController {
                 // exit back to hub page but reintialize the navigation controller
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 // set view to homehub
-                let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("homeHub") as! homeHub
+                let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("sensorsHome") as! sensorsHome
                 //segue
                 self.presentViewController(destinationViewController, animated: true, completion:nil)
                 // The object has been saved.
@@ -60,10 +60,25 @@ class sensorZoom: UIViewController {
                 // There was a problem, check error.description
             }
         }
+        
+        // create query
+        var deleteNews = PFQuery(className: "news")
+        deleteNews.whereKey("sensorId", equalTo: SingletonB.sharedInstance.sensorIdPayload)
+        deleteNews.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        
+                        object.deleteInBackground()
+                            
+                        }
+                        
+                    }
+                }
+        }
     }
 
-
-
-
-    
 }

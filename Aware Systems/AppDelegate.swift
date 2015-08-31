@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var pushPayload = false
             if let options = launchOptions {
                 pushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil
+                
             }
             if (preBackgroundPush || oldPushHandlerOnly || pushPayload) {
                 PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
@@ -91,7 +92,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         SingletonB.sharedInstance.sensorNamePayload = userInfo["sensorName"] as! String
         SingletonB.sharedInstance.sensorIdPayload = userInfo["sensorId"] as! String
-        
         
         //change VC
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
