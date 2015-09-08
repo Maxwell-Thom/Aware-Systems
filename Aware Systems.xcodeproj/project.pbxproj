@@ -8,9 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		0BB395BEC6D27C7324858EAB /* Pods_Aware_Systems.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10A6AD06A3AF2D5CDD77480 /* Pods_Aware_Systems.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		CF1232D51B27B14600CAE3F9 /* homeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1232D41B27B14600CAE3F9 /* homeCell.swift */; };
-		CF1232DB1B27BDC100CAE3F9 /* sensorsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1232DA1B27BDC100CAE3F9 /* sensorsHome.swift */; };
-		CF1232DF1B2F5B4200CAE3F9 /* sensorZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1232DE1B2F5B4200CAE3F9 /* sensorZoom.swift */; };
+		CF1232D51B27B14600CAE3F9 /* homeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1232D41B27B14600CAE3F9 /* homeCell.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CF1232DB1B27BDC100CAE3F9 /* sensorsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1232DA1B27BDC100CAE3F9 /* sensorsHome.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CF1232DF1B2F5B4200CAE3F9 /* sensorZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1232DE1B2F5B4200CAE3F9 /* sensorZoom.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CF239DA01B9A051100DFEDBE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF239D9F1B9A04C300DFEDBE /* Charts.framework */; };
+		CF239DA11B9A051100DFEDBE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF239D9F1B9A04C300DFEDBE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF239DA91B9A069E00DFEDBE /* heartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239DA81B9A069E00DFEDBE /* heartBeat.swift */; };
+		CF239E3D1B9E2E3300DFEDBE /* CVAuxiliaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E231B9E2E3300DFEDBE /* CVAuxiliaryView.swift */; };
+		CF239E3E1B9E2E3300DFEDBE /* CVCalendarContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E241B9E2E3300DFEDBE /* CVCalendarContentViewController.swift */; };
+		CF239E3F1B9E2E3300DFEDBE /* CVCalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E251B9E2E3300DFEDBE /* CVCalendarDayView.swift */; };
+		CF239E401B9E2E3300DFEDBE /* CVCalendarDayViewControlCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E261B9E2E3300DFEDBE /* CVCalendarDayViewControlCoordinator.swift */; };
+		CF239E411B9E2E3300DFEDBE /* CVCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E271B9E2E3300DFEDBE /* CVCalendarManager.swift */; };
+		CF239E421B9E2E3300DFEDBE /* CVCalendarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E281B9E2E3300DFEDBE /* CVCalendarMenuView.swift */; };
+		CF239E431B9E2E3300DFEDBE /* CVCalendarMenuViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E291B9E2E3300DFEDBE /* CVCalendarMenuViewDelegate.swift */; };
+		CF239E441B9E2E3300DFEDBE /* CVCalendarMonthContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E2A1B9E2E3300DFEDBE /* CVCalendarMonthContentViewController.swift */; };
+		CF239E451B9E2E3300DFEDBE /* CVCalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E2B1B9E2E3300DFEDBE /* CVCalendarMonthView.swift */; };
+		CF239E461B9E2E3300DFEDBE /* CVCalendarTouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E2C1B9E2E3300DFEDBE /* CVCalendarTouchController.swift */; };
+		CF239E471B9E2E3300DFEDBE /* CVCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E2D1B9E2E3300DFEDBE /* CVCalendarView.swift */; };
+		CF239E481B9E2E3300DFEDBE /* CVCalendarViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E2E1B9E2E3300DFEDBE /* CVCalendarViewAnimator.swift */; };
+		CF239E491B9E2E3300DFEDBE /* CVCalendarViewAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E2F1B9E2E3300DFEDBE /* CVCalendarViewAnimatorDelegate.swift */; };
+		CF239E4A1B9E2E3300DFEDBE /* CVCalendarViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E301B9E2E3300DFEDBE /* CVCalendarViewAppearance.swift */; };
+		CF239E4B1B9E2E3300DFEDBE /* CVCalendarViewAppearanceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E311B9E2E3300DFEDBE /* CVCalendarViewAppearanceDelegate.swift */; };
+		CF239E4C1B9E2E3300DFEDBE /* CVCalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E321B9E2E3300DFEDBE /* CVCalendarViewDelegate.swift */; };
+		CF239E4D1B9E2E3300DFEDBE /* CVCalendarViewPresentationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E331B9E2E3300DFEDBE /* CVCalendarViewPresentationMode.swift */; };
+		CF239E4E1B9E2E3300DFEDBE /* CVCalendarWeekContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E341B9E2E3300DFEDBE /* CVCalendarWeekContentViewController.swift */; };
+		CF239E4F1B9E2E3300DFEDBE /* CVCalendarWeekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E351B9E2E3300DFEDBE /* CVCalendarWeekday.swift */; };
+		CF239E501B9E2E3300DFEDBE /* CVCalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E361B9E2E3300DFEDBE /* CVCalendarWeekView.swift */; };
+		CF239E511B9E2E3300DFEDBE /* CVDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E371B9E2E3300DFEDBE /* CVDate.swift */; };
+		CF239E521B9E2E3300DFEDBE /* CVRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E381B9E2E3300DFEDBE /* CVRange.swift */; };
+		CF239E531B9E2E3300DFEDBE /* CVScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E391B9E2E3300DFEDBE /* CVScrollDirection.swift */; };
+		CF239E541B9E2E3300DFEDBE /* CVSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E3A1B9E2E3300DFEDBE /* CVSelectionType.swift */; };
+		CF239E551B9E2E3300DFEDBE /* CVSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E3B1B9E2E3300DFEDBE /* CVSet.swift */; };
+		CF239E561B9E2E3300DFEDBE /* CVShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E3C1B9E2E3300DFEDBE /* CVShape.swift */; };
+		CF239E581B9E2E9200DFEDBE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F811B2785E400B6514E /* Parse.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CF239E5A1B9EC2B600DFEDBE /* loggingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF239E591B9EC2B600DFEDBE /* loggingCell.swift */; };
 		CF374F861B2785E400B6514E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F801B2785E400B6514E /* Bolts.framework */; };
 		CF374F8D1B27866700B6514E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F8C1B27866700B6514E /* AudioToolbox.framework */; };
 		CF374F8F1B27867400B6514E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F8E1B27867400B6514E /* CFNetwork.framework */; };
@@ -25,16 +56,10 @@
 		CF374FA11B2786FA00B6514E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374FA01B2786FA00B6514E /* libsqlite3.dylib */; };
 		CF374FA31B27870500B6514E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374FA21B27870500B6514E /* Accounts.framework */; };
 		CF374FA51B27870F00B6514E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374FA41B27870F00B6514E /* Social.framework */; };
-		CF58E8581B93B3C700CACB55 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F811B2785E400B6514E /* Parse.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		CF58E85A1B93CE8700CACB55 /* noNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58E8591B93CE8700CACB55 /* noNews.swift */; };
-		CF73F2101B0FAF460092A73C /* createAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F20F1B0FAF460092A73C /* createAccountVC.swift */; };
-		CF73F2121B0FAFB60092A73C /* BoilerPlate UIKit class.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F2111B0FAFB60092A73C /* BoilerPlate UIKit class.swift */; };
-		CF73F2151B13E2F50092A73C /* accountCreationSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F2141B13E2F50092A73C /* accountCreationSuccess.swift */; };
-		CF73F21F1B14D0F30092A73C /* addHubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F21E1B14D0F30092A73C /* addHubVC.swift */; };
-		CF73F2221B14E5530092A73C /* wifiSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F2211B14E5530092A73C /* wifiSetup.swift */; };
-		CF73F2261B163DDD0092A73C /* shareWifi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F2251B163DDD0092A73C /* shareWifi.swift */; };
-		CF96B85E1B8A864B0008B055 /* pageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF96B85D1B8A864B0008B055 /* pageController.swift */; };
-		CF96B8661B8BAEB60008B055 /* newsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF96B8651B8BAEB60008B055 /* newsFeed.swift */; };
+		CF58E85A1B93CE8700CACB55 /* noNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58E8591B93CE8700CACB55 /* noNews.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CF73F2121B0FAFB60092A73C /* BoilerPlate UIKit class.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F2111B0FAFB60092A73C /* BoilerPlate UIKit class.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CF96B85E1B8A864B0008B055 /* pageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF96B85D1B8A864B0008B055 /* pageController.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CF96B8661B8BAEB60008B055 /* newsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF96B8651B8BAEB60008B055 /* newsFeed.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CFB806221B7A7BCE00CC6249 /* Empty Battery-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806211B7A7BCE00CC6249 /* Empty Battery-32.png */; };
 		CFB806241B7A7BD900CC6249 /* Full Battery-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806231B7A7BD900CC6249 /* Full Battery-32.png */; };
 		CFB806261B7A7BE300CC6249 /* Charged Battery-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806251B7A7BE300CC6249 /* Charged Battery-32.png */; };
@@ -42,19 +67,31 @@
 		CFB8062A1B7A7BFB00CC6249 /* Low Battery-32-3.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806291B7A7BFB00CC6249 /* Low Battery-32-3.png */; };
 		CFB8062C1B7A877200CC6249 /* Wi-Fi Filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB8062B1B7A877200CC6249 /* Wi-Fi Filled-32.png */; };
 		CFB8062E1B7A877A00CC6249 /* Wi-Fi-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB8062D1B7A877A00CC6249 /* Wi-Fi-32.png */; };
-		CFB806661B810A9C00CC6249 /* locationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB806651B810A9C00CC6249 /* locationController.swift */; };
+		CFB806661B810A9C00CC6249 /* locationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB806651B810A9C00CC6249 /* locationController.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CFB806681B826D4A00CC6249 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB806671B826D4A00CC6249 /* Images-2.xcassets */; };
 		CFB806741B868C0600CC6249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB806731B868C0600CC6249 /* Main.storyboard */; };
-		CFC03D7B1B0E6AA700A7CE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC03D7A1B0E6AA700A7CE6B /* AppDelegate.swift */; };
-		CFC03D7D1B0E6AA700A7CE6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC03D7C1B0E6AA700A7CE6B /* ViewController.swift */; };
+		CFC03D7B1B0E6AA700A7CE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC03D7A1B0E6AA700A7CE6B /* AppDelegate.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CFC03D851B0E6AA700A7CE6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC03D831B0E6AA700A7CE6B /* LaunchScreen.xib */; };
 		CFC03D911B0E6AA800A7CE6B /* Aware_SystemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC03D901B0E6AA800A7CE6B /* Aware_SystemsTests.swift */; };
-		CFC03D9D1B0E751A00A7CE6B /* settingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC03D9C1B0E751A00A7CE6B /* settingsCell.swift */; };
-		CFC7DC831B72F41200BBDE2B /* sensorDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7DC821B72F41100BBDE2B /* sensorDetails.swift */; };
-		CFE22B411B39E07300C7E58A /* dataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE22B401B39E07300C7E58A /* dataManager.swift */; };
+		CFC7DC831B72F41200BBDE2B /* sensorDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7DC821B72F41100BBDE2B /* sensorDetails.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CFE22B411B39E07300C7E58A /* dataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE22B401B39E07300C7E58A /* dataManager.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CF239D9E1B9A04C300DFEDBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF239D9A1B9A04C300DFEDBE /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
+		CF239DA21B9A051100DFEDBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF239D9A1B9A04C300DFEDBE /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
 		CFC03D8B1B0E6AA800A7CE6B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CFC03D6D1B0E6AA700A7CE6B /* Project object */;
@@ -64,12 +101,55 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CF239DA41B9A051100DFEDBE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CF239DA11B9A051100DFEDBE /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		345913B2789CA3D2712A720B /* Pods-Aware Systems.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aware Systems.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aware Systems/Pods-Aware Systems.debug.xcconfig"; sourceTree = "<group>"; };
 		35A459F0AB608743C210CF88 /* Pods-Aware Systems.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aware Systems.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aware Systems/Pods-Aware Systems.release.xcconfig"; sourceTree = "<group>"; };
 		CF1232D41B27B14600CAE3F9 /* homeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeCell.swift; sourceTree = "<group>"; };
 		CF1232DA1B27BDC100CAE3F9 /* sensorsHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sensorsHome.swift; sourceTree = "<group>"; };
 		CF1232DE1B2F5B4200CAE3F9 /* sensorZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sensorZoom.swift; sourceTree = "<group>"; };
+		CF239D9A1B9A04C300DFEDBE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/ios-charts-master-4/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
+		CF239DA81B9A069E00DFEDBE /* heartBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = heartBeat.swift; sourceTree = "<group>"; };
+		CF239E231B9E2E3300DFEDBE /* CVAuxiliaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVAuxiliaryView.swift; sourceTree = "<group>"; };
+		CF239E241B9E2E3300DFEDBE /* CVCalendarContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarContentViewController.swift; sourceTree = "<group>"; };
+		CF239E251B9E2E3300DFEDBE /* CVCalendarDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarDayView.swift; sourceTree = "<group>"; };
+		CF239E261B9E2E3300DFEDBE /* CVCalendarDayViewControlCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarDayViewControlCoordinator.swift; sourceTree = "<group>"; };
+		CF239E271B9E2E3300DFEDBE /* CVCalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarManager.swift; sourceTree = "<group>"; };
+		CF239E281B9E2E3300DFEDBE /* CVCalendarMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarMenuView.swift; sourceTree = "<group>"; };
+		CF239E291B9E2E3300DFEDBE /* CVCalendarMenuViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarMenuViewDelegate.swift; sourceTree = "<group>"; };
+		CF239E2A1B9E2E3300DFEDBE /* CVCalendarMonthContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarMonthContentViewController.swift; sourceTree = "<group>"; };
+		CF239E2B1B9E2E3300DFEDBE /* CVCalendarMonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarMonthView.swift; sourceTree = "<group>"; };
+		CF239E2C1B9E2E3300DFEDBE /* CVCalendarTouchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarTouchController.swift; sourceTree = "<group>"; };
+		CF239E2D1B9E2E3300DFEDBE /* CVCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarView.swift; sourceTree = "<group>"; };
+		CF239E2E1B9E2E3300DFEDBE /* CVCalendarViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewAnimator.swift; sourceTree = "<group>"; };
+		CF239E2F1B9E2E3300DFEDBE /* CVCalendarViewAnimatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewAnimatorDelegate.swift; sourceTree = "<group>"; };
+		CF239E301B9E2E3300DFEDBE /* CVCalendarViewAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewAppearance.swift; sourceTree = "<group>"; };
+		CF239E311B9E2E3300DFEDBE /* CVCalendarViewAppearanceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewAppearanceDelegate.swift; sourceTree = "<group>"; };
+		CF239E321B9E2E3300DFEDBE /* CVCalendarViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewDelegate.swift; sourceTree = "<group>"; };
+		CF239E331B9E2E3300DFEDBE /* CVCalendarViewPresentationMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewPresentationMode.swift; sourceTree = "<group>"; };
+		CF239E341B9E2E3300DFEDBE /* CVCalendarWeekContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarWeekContentViewController.swift; sourceTree = "<group>"; };
+		CF239E351B9E2E3300DFEDBE /* CVCalendarWeekday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarWeekday.swift; sourceTree = "<group>"; };
+		CF239E361B9E2E3300DFEDBE /* CVCalendarWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarWeekView.swift; sourceTree = "<group>"; };
+		CF239E371B9E2E3300DFEDBE /* CVDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVDate.swift; sourceTree = "<group>"; };
+		CF239E381B9E2E3300DFEDBE /* CVRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVRange.swift; sourceTree = "<group>"; };
+		CF239E391B9E2E3300DFEDBE /* CVScrollDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVScrollDirection.swift; sourceTree = "<group>"; };
+		CF239E3A1B9E2E3300DFEDBE /* CVSelectionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVSelectionType.swift; sourceTree = "<group>"; };
+		CF239E3B1B9E2E3300DFEDBE /* CVSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVSet.swift; sourceTree = "<group>"; };
+		CF239E3C1B9E2E3300DFEDBE /* CVShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVShape.swift; sourceTree = "<group>"; };
+		CF239E591B9EC2B600DFEDBE /* loggingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loggingCell.swift; sourceTree = "<group>"; };
 		CF374F801B2785E400B6514E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Aware Systems/Bolts.framework"; sourceTree = "<group>"; };
 		CF374F811B2785E400B6514E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Aware Systems/Parse.framework"; sourceTree = "<group>"; };
 		CF374F8C1B27866700B6514E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -86,13 +166,8 @@
 		CF374FA21B27870500B6514E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CF374FA41B27870F00B6514E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		CF58E8591B93CE8700CACB55 /* noNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noNews.swift; sourceTree = "<group>"; };
-		CF73F20F1B0FAF460092A73C /* createAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createAccountVC.swift; sourceTree = "<group>"; };
 		CF73F2111B0FAFB60092A73C /* BoilerPlate UIKit class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BoilerPlate UIKit class.swift"; path = "../Aware Systems/BoilerPlate UIKit class.swift"; sourceTree = "<group>"; };
-		CF73F2141B13E2F50092A73C /* accountCreationSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountCreationSuccess.swift; sourceTree = "<group>"; };
 		CF73F21D1B1403470092A73C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = "../Aware Systems/MyPlayground.playground"; sourceTree = "<group>"; };
-		CF73F21E1B14D0F30092A73C /* addHubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHubVC.swift; sourceTree = "<group>"; };
-		CF73F2211B14E5530092A73C /* wifiSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wifiSetup.swift; sourceTree = "<group>"; };
-		CF73F2251B163DDD0092A73C /* shareWifi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shareWifi.swift; sourceTree = "<group>"; };
 		CF96B85D1B8A864B0008B055 /* pageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pageController.swift; sourceTree = "<group>"; };
 		CF96B8651B8BAEB60008B055 /* newsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeed.swift; sourceTree = "<group>"; };
 		CFA3863E1B2795ED008A872A /* Aware Systems-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aware Systems-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -109,12 +184,10 @@
 		CFC03D751B0E6AA700A7CE6B /* Aware Systems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aware Systems.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC03D791B0E6AA700A7CE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC03D7A1B0E6AA700A7CE6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFC03D7C1B0E6AA700A7CE6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFC03D841B0E6AA700A7CE6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CFC03D8A1B0E6AA800A7CE6B /* Aware SystemsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aware SystemsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC03D8F1B0E6AA800A7CE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC03D901B0E6AA800A7CE6B /* Aware_SystemsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aware_SystemsTests.swift; sourceTree = "<group>"; };
-		CFC03D9C1B0E751A00A7CE6B /* settingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsCell.swift; sourceTree = "<group>"; };
 		CFC7DC821B72F41100BBDE2B /* sensorDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sensorDetails.swift; sourceTree = "<group>"; };
 		CFE22B401B39E07300C7E58A /* dataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataManager.swift; sourceTree = "<group>"; };
 		CFEA46C71B1D402F0042D996 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = "../Aware Systems/Podfile"; sourceTree = "<group>"; };
@@ -133,10 +206,11 @@
 				CF374F9D1B2786C600B6514E /* SystemConfiguration.framework in Frameworks */,
 				CF374F9B1B2786B800B6514E /* StoreKit.framework in Frameworks */,
 				CF374F991B2786AE00B6514E /* Security.framework in Frameworks */,
+				CF239DA01B9A051100DFEDBE /* Charts.framework in Frameworks */,
 				CF374F971B2786A200B6514E /* QuartzCore.framework in Frameworks */,
 				CF374F951B27869700B6514E /* MobileCoreServices.framework in Frameworks */,
+				CF239E581B9E2E9200DFEDBE /* Parse.framework in Frameworks */,
 				CF374F931B27868C00B6514E /* CoreLocation.framework in Frameworks */,
-				CF58E8581B93B3C700CACB55 /* Parse.framework in Frameworks */,
 				CF374F861B2785E400B6514E /* Bolts.framework in Frameworks */,
 				CF374F911B27867E00B6514E /* CoreGraphics.framework in Frameworks */,
 				CF374F8F1B27867400B6514E /* CFNetwork.framework in Frameworks */,
@@ -187,54 +261,84 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CF15B9941B9302F7006297E0 /* New Group */ = {
+		CF239D9B1B9A04C300DFEDBE /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				CF239D9F1B9A04C300DFEDBE /* Charts.framework */,
 			);
-			name = "New Group";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		CF73F20E1B0FAEF90092A73C /* SettingVCs */ = {
+		CF239DA51B9A057E00DFEDBE /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				CFC03D9C1B0E751A00A7CE6B /* settingsCell.swift */,
-				CFC03D7C1B0E6AA700A7CE6B /* ViewController.swift */,
-				CF73F2131B13E2BD0092A73C /* New Account */,
-				CF73F2201B14E5090092A73C /* Add Hub */,
+				CF1232DE1B2F5B4200CAE3F9 /* sensorZoom.swift */,
+				CF239DA81B9A069E00DFEDBE /* heartBeat.swift */,
 			);
-			name = SettingVCs;
+			name = Notification;
 			sourceTree = "<group>";
 		};
-		CF73F2131B13E2BD0092A73C /* New Account */ = {
+		CF239DA61B9A05A500DFEDBE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CF73F20F1B0FAF460092A73C /* createAccountVC.swift */,
-				CF73F2141B13E2F50092A73C /* accountCreationSuccess.swift */,
+				CF1232DA1B27BDC100CAE3F9 /* sensorsHome.swift */,
+				CFB806651B810A9C00CC6249 /* locationController.swift */,
+				CF96B85D1B8A864B0008B055 /* pageController.swift */,
+				CF58E8591B93CE8700CACB55 /* noNews.swift */,
+				CF96B8651B8BAEB60008B055 /* newsFeed.swift */,
+				CF1232D41B27B14600CAE3F9 /* homeCell.swift */,
 			);
-			name = "New Account";
+			name = Home;
 			sourceTree = "<group>";
 		};
-		CF73F2201B14E5090092A73C /* Add Hub */ = {
+		CF239DA71B9A05D400DFEDBE /* SensorDetails */ = {
 			isa = PBXGroup;
 			children = (
-				CF73F21E1B14D0F30092A73C /* addHubVC.swift */,
-				CF73F2211B14E5530092A73C /* wifiSetup.swift */,
-				CF73F2251B163DDD0092A73C /* shareWifi.swift */,
+				CFC7DC821B72F41100BBDE2B /* sensorDetails.swift */,
+				CF239E591B9EC2B600DFEDBE /* loggingCell.swift */,
 			);
-			name = "Add Hub";
+			name = SensorDetails;
+			sourceTree = "<group>";
+		};
+		CF239E221B9E2E3300DFEDBE /* CVCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				CF239E231B9E2E3300DFEDBE /* CVAuxiliaryView.swift */,
+				CF239E241B9E2E3300DFEDBE /* CVCalendarContentViewController.swift */,
+				CF239E251B9E2E3300DFEDBE /* CVCalendarDayView.swift */,
+				CF239E261B9E2E3300DFEDBE /* CVCalendarDayViewControlCoordinator.swift */,
+				CF239E271B9E2E3300DFEDBE /* CVCalendarManager.swift */,
+				CF239E281B9E2E3300DFEDBE /* CVCalendarMenuView.swift */,
+				CF239E291B9E2E3300DFEDBE /* CVCalendarMenuViewDelegate.swift */,
+				CF239E2A1B9E2E3300DFEDBE /* CVCalendarMonthContentViewController.swift */,
+				CF239E2B1B9E2E3300DFEDBE /* CVCalendarMonthView.swift */,
+				CF239E2C1B9E2E3300DFEDBE /* CVCalendarTouchController.swift */,
+				CF239E2D1B9E2E3300DFEDBE /* CVCalendarView.swift */,
+				CF239E2E1B9E2E3300DFEDBE /* CVCalendarViewAnimator.swift */,
+				CF239E2F1B9E2E3300DFEDBE /* CVCalendarViewAnimatorDelegate.swift */,
+				CF239E301B9E2E3300DFEDBE /* CVCalendarViewAppearance.swift */,
+				CF239E311B9E2E3300DFEDBE /* CVCalendarViewAppearanceDelegate.swift */,
+				CF239E321B9E2E3300DFEDBE /* CVCalendarViewDelegate.swift */,
+				CF239E331B9E2E3300DFEDBE /* CVCalendarViewPresentationMode.swift */,
+				CF239E341B9E2E3300DFEDBE /* CVCalendarWeekContentViewController.swift */,
+				CF239E351B9E2E3300DFEDBE /* CVCalendarWeekday.swift */,
+				CF239E361B9E2E3300DFEDBE /* CVCalendarWeekView.swift */,
+				CF239E371B9E2E3300DFEDBE /* CVDate.swift */,
+				CF239E381B9E2E3300DFEDBE /* CVRange.swift */,
+				CF239E391B9E2E3300DFEDBE /* CVScrollDirection.swift */,
+				CF239E3A1B9E2E3300DFEDBE /* CVSelectionType.swift */,
+				CF239E3B1B9E2E3300DFEDBE /* CVSet.swift */,
+				CF239E3C1B9E2E3300DFEDBE /* CVShape.swift */,
+			);
+			path = CVCalendar;
 			sourceTree = "<group>";
 		};
 		CF98F42F1B1D6AE800BCA01C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CF1232DA1B27BDC100CAE3F9 /* sensorsHome.swift */,
-				CFB806651B810A9C00CC6249 /* locationController.swift */,
-				CF1232D41B27B14600CAE3F9 /* homeCell.swift */,
-				CFC7DC821B72F41100BBDE2B /* sensorDetails.swift */,
-				CF1232DE1B2F5B4200CAE3F9 /* sensorZoom.swift */,
-				CF96B85D1B8A864B0008B055 /* pageController.swift */,
-				CF96B8651B8BAEB60008B055 /* newsFeed.swift */,
-				CF58E8591B93CE8700CACB55 /* noNews.swift */,
+				CF239DA71B9A05D400DFEDBE /* SensorDetails */,
+				CF239DA61B9A05A500DFEDBE /* Home */,
+				CF239DA51B9A057E00DFEDBE /* Notification */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -256,7 +360,6 @@
 		CFC03D6C1B0E6AA700A7CE6B = {
 			isa = PBXGroup;
 			children = (
-				CF15B9941B9302F7006297E0 /* New Group */,
 				CFC03D771B0E6AA700A7CE6B /* Aware Systems */,
 				CFC03D8D1B0E6AA800A7CE6B /* Aware SystemsTests */,
 				CFC03D761B0E6AA700A7CE6B /* Products */,
@@ -278,12 +381,13 @@
 			isa = PBXGroup;
 			children = (
 				CFB806731B868C0600CC6249 /* Main.storyboard */,
-				CFB806201B7A7BB700CC6249 /* Images */,
+				CF239E221B9E2E3300DFEDBE /* CVCalendar */,
 				CF98F42F1B1D6AE800BCA01C /* Home */,
-				CF73F20E1B0FAEF90092A73C /* SettingVCs */,
 				CFC03D7A1B0E6AA700A7CE6B /* AppDelegate.swift */,
 				CFC03D831B0E6AA700A7CE6B /* LaunchScreen.xib */,
 				CFB806671B826D4A00CC6249 /* Images-2.xcassets */,
+				CFB806201B7A7BB700CC6249 /* Images */,
+				CF239D9A1B9A04C300DFEDBE /* Charts.xcodeproj */,
 				CFC03D781B0E6AA700A7CE6B /* Supporting Files */,
 			);
 			path = "Aware Systems";
@@ -332,10 +436,12 @@
 				CFC03D731B0E6AA700A7CE6B /* Resources */,
 				0FBADCF3FC940BA8A1249BBF /* Embed Pods Frameworks */,
 				39C7544DEDFA2BB2285C61B7 /* Copy Pods Resources */,
+				CF239DA41B9A051100DFEDBE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CF239DA31B9A051100DFEDBE /* PBXTargetDependency */,
 			);
 			name = "Aware Systems";
 			productName = "Aware Systems";
@@ -395,6 +501,12 @@
 			mainGroup = CFC03D6C1B0E6AA700A7CE6B;
 			productRefGroup = CFC03D761B0E6AA700A7CE6B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CF239D9B1B9A04C300DFEDBE /* Products */;
+					ProjectRef = CF239D9A1B9A04C300DFEDBE /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CFC03D741B0E6AA700A7CE6B /* Aware Systems */,
@@ -402,6 +514,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CF239D9F1B9A04C300DFEDBE /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = CF239D9E1B9A04C300DFEDBE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CFC03D731B0E6AA700A7CE6B /* Resources */ = {
@@ -483,23 +605,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF239E411B9E2E3300DFEDBE /* CVCalendarManager.swift in Sources */,
+				CF239E521B9E2E3300DFEDBE /* CVRange.swift in Sources */,
 				CFB806661B810A9C00CC6249 /* locationController.swift in Sources */,
 				CFC7DC831B72F41200BBDE2B /* sensorDetails.swift in Sources */,
-				CF73F2221B14E5530092A73C /* wifiSetup.swift in Sources */,
-				CF73F2151B13E2F50092A73C /* accountCreationSuccess.swift in Sources */,
-				CFC03D7D1B0E6AA700A7CE6B /* ViewController.swift in Sources */,
-				CF73F21F1B14D0F30092A73C /* addHubVC.swift in Sources */,
+				CF239E561B9E2E3300DFEDBE /* CVShape.swift in Sources */,
+				CF239E451B9E2E3300DFEDBE /* CVCalendarMonthView.swift in Sources */,
+				CF239E3F1B9E2E3300DFEDBE /* CVCalendarDayView.swift in Sources */,
+				CF239E401B9E2E3300DFEDBE /* CVCalendarDayViewControlCoordinator.swift in Sources */,
+				CF239E501B9E2E3300DFEDBE /* CVCalendarWeekView.swift in Sources */,
+				CF239E421B9E2E3300DFEDBE /* CVCalendarMenuView.swift in Sources */,
+				CF239E531B9E2E3300DFEDBE /* CVScrollDirection.swift in Sources */,
+				CF239E441B9E2E3300DFEDBE /* CVCalendarMonthContentViewController.swift in Sources */,
 				CF96B85E1B8A864B0008B055 /* pageController.swift in Sources */,
+				CF239E511B9E2E3300DFEDBE /* CVDate.swift in Sources */,
+				CF239E4F1B9E2E3300DFEDBE /* CVCalendarWeekday.swift in Sources */,
 				CF58E85A1B93CE8700CACB55 /* noNews.swift in Sources */,
 				CFE22B411B39E07300C7E58A /* dataManager.swift in Sources */,
 				CF1232D51B27B14600CAE3F9 /* homeCell.swift in Sources */,
+				CF239E431B9E2E3300DFEDBE /* CVCalendarMenuViewDelegate.swift in Sources */,
+				CF239DA91B9A069E00DFEDBE /* heartBeat.swift in Sources */,
+				CF239E4B1B9E2E3300DFEDBE /* CVCalendarViewAppearanceDelegate.swift in Sources */,
+				CF239E461B9E2E3300DFEDBE /* CVCalendarTouchController.swift in Sources */,
+				CF239E491B9E2E3300DFEDBE /* CVCalendarViewAnimatorDelegate.swift in Sources */,
 				CF1232DB1B27BDC100CAE3F9 /* sensorsHome.swift in Sources */,
+				CF239E5A1B9EC2B600DFEDBE /* loggingCell.swift in Sources */,
 				CF1232DF1B2F5B4200CAE3F9 /* sensorZoom.swift in Sources */,
 				CFC03D7B1B0E6AA700A7CE6B /* AppDelegate.swift in Sources */,
-				CF73F2101B0FAF460092A73C /* createAccountVC.swift in Sources */,
-				CF73F2261B163DDD0092A73C /* shareWifi.swift in Sources */,
+				CF239E4E1B9E2E3300DFEDBE /* CVCalendarWeekContentViewController.swift in Sources */,
+				CF239E471B9E2E3300DFEDBE /* CVCalendarView.swift in Sources */,
+				CF239E4A1B9E2E3300DFEDBE /* CVCalendarViewAppearance.swift in Sources */,
+				CF239E541B9E2E3300DFEDBE /* CVSelectionType.swift in Sources */,
+				CF239E551B9E2E3300DFEDBE /* CVSet.swift in Sources */,
+				CF239E3E1B9E2E3300DFEDBE /* CVCalendarContentViewController.swift in Sources */,
+				CF239E3D1B9E2E3300DFEDBE /* CVAuxiliaryView.swift in Sources */,
+				CF239E4D1B9E2E3300DFEDBE /* CVCalendarViewPresentationMode.swift in Sources */,
 				CF96B8661B8BAEB60008B055 /* newsFeed.swift in Sources */,
-				CFC03D9D1B0E751A00A7CE6B /* settingsCell.swift in Sources */,
+				CF239E4C1B9E2E3300DFEDBE /* CVCalendarViewDelegate.swift in Sources */,
+				CF239E481B9E2E3300DFEDBE /* CVCalendarViewAnimator.swift in Sources */,
 				CF73F2121B0FAFB60092A73C /* BoilerPlate UIKit class.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +658,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CF239DA31B9A051100DFEDBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = CF239DA21B9A051100DFEDBE /* PBXContainerItemProxy */;
+		};
 		CFC03D8C1B0E6AA800A7CE6B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CFC03D741B0E6AA700A7CE6B /* Aware Systems */;
@@ -689,6 +837,14 @@
 					Systems,
 					"$(PROJECT_DIR)/Aware",
 					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
 				);
 				INFOPLIST_FILE = "Aware Systems/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -712,6 +868,14 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
 					"$(PROJECT_DIR)/Aware",
 					Systems,
 					"$(PROJECT_DIR)/Aware",

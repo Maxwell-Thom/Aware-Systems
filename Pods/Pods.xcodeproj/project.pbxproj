@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F3B4CF88322A646EB6396C1E940A07B7 /* PBXContainerItemProxy */ = {
+		1E26045672A70457C8CD873F4AD8B195 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -213,7 +213,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				6CC4A8C0050CFD3AC1A1AE52A16FDC21 /* PBXTargetDependency */,
+				7F92EFA2A9F23311D8BE7CE6ADDF83FB /* PBXTargetDependency */,
 			);
 			name = "Pods-Aware Systems";
 			productName = "Pods-Aware Systems";
@@ -290,11 +290,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6CC4A8C0050CFD3AC1A1AE52A16FDC21 /* PBXTargetDependency */ = {
+		7F92EFA2A9F23311D8BE7CE6ADDF83FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PullToBounce;
 			target = F5BA4CE5F5D59667A6481A68AF7F339F /* PullToBounce */;
-			targetProxy = F3B4CF88322A646EB6396C1E940A07B7 /* PBXContainerItemProxy */;
+			targetProxy = 1E26045672A70457C8CD873F4AD8B195 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

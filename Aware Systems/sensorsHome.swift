@@ -57,7 +57,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
          self.newsFeedLabel.layer.mask = rectShape
         
         self.tableView.separatorColor = UIColor( red: 75/255, green: 168/255, blue:222/255, alpha: 1.0 )
-        
+
     }
     
     func refresh(refreshControl: UIRefreshControl) {
@@ -78,21 +78,26 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
     {
         // create cell of homeCell type
         let cell:homeCell = self.tableView.dequeueReusableCellWithIdentifier("homeCell") as! homeCell
-        
+        //set index in cell
+        cell.index = indexPath.row
+        //set objectId
+        cell.objectId = selectedSensorId[indexPath.row]
         // set cell title (the name of the hub)
         cell.hubName!.text = sensorDescription[indexPath.row]
         
         // check data recieved and initialize status text and color
         if(self.sensorStatus[indexPath.row] == true)
         {
+            cell.armingSwitch.on = true
             //set text
             cell.hubStatus.text = "Armed"
             //set color
-            cell.hubStatus.textColor = UIColor( red: 0/255, green: 255/255, blue:111/255, alpha: 1.0 )
+            cell.hubStatus.textColor = UIColor( red: 0/255, green: 142/255, blue:65/255, alpha: 1.0  )
         }
         
         else if (self.sensorStatus[indexPath.row] == false)
         {
+            cell.armingSwitch.on = false
             cell.hubStatus.text = "Disarmed"
             cell.hubStatus.textColor = UIColor.redColor()
         }
@@ -148,6 +153,8 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
         //use singleton variable to record which cell was selected, i use this in sensor details to set title.
         SingletonB.sharedInstance.sensorSelected = selectedSensorId[indexPath.row]
         
+        sensorDescription.removeAll(keepCapacity: false)
+        
         // perform segue after setting sensorSelected
         performSegueWithIdentifier("sensorDetails", sender: homeCell.self)
     }
@@ -179,8 +186,6 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                     
                 // There was a problem, check error.description
                 }
-                    //************** i think this reload isnt relevant, check when you have internet ************
-                    //self.tableView.reloadData()
             }
             
             //reload table view to reflect changes

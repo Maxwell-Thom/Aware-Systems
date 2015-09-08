@@ -49,7 +49,7 @@ class locationController: UIViewController, UIPickerViewDataSource, UIPickerView
                         SingletonB.sharedInstance.hubSelected = self.selectedHub[0]
                         if(self.status[0] == true){
                             self.hubStatus.text = "Online"
-                            self.hubStatus.textColor = UIColor( red: 0/255, green: 255/255, blue:111/255, alpha: 1.0 )
+                            self.hubStatus.textColor = UIColor( red: 0/255, green: 142/255, blue:65/255, alpha: 1.0 )
                         }
                         else if (self.status[0] == false){
                             self.hubStatus.text = "Offline"

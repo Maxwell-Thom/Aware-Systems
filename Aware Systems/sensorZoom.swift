@@ -8,18 +8,41 @@
 
 import UIKit
 import Parse
+import Charts
 
 class sensorZoom: UIViewController {
 
     @IBOutlet weak var sensorName: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var atLocation: UILabel!
+    @IBOutlet weak var sendText: UIButton!
+    @IBOutlet weak var makeCall: UIButton!
+    @IBOutlet weak var Escalate: UIButton!
+    @IBOutlet weak var silenceAlert: UIButton!
+    @IBOutlet weak var lineChartView: LineChartView!
     
+    var hubDescription : [String] = []
+    var hubRelations : [NSArray] = []
+    var months: [String]!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // assign name from singleton (the names is sent in the notification payload and the notification is sent from the payload)
         self.sensorName.text = SingletonB.sharedInstance.sensorNamePayload
+        self.dataQueryInhubs()
+        
+        //chart stuff
+        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        let unitsSold = [17.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+        
+        setChart(months, values: unitsSold)
+        
+        makeCall.layer.cornerRadius = 15
+        sendText.layer.cornerRadius = 15
+        Escalate.layer.cornerRadius = 15
+        silenceAlert.layer.cornerRadius = 15
+        self.tableView.separatorColor = UIColor( red: 75/255, green: 168/255, blue:222/255, alpha: 1.0 )
     }
     
     // set number of rows in tableview
@@ -79,6 +102,81 @@ class sensorZoom: UIViewController {
                     }
                 }
         }
+    }
+    
+    func setHubName(){
+        
+        var counter = 0
+        
+        while(counter < hubDescription.count){
+            
+            if(self.hubRelations[counter].containsObject(SingletonB.sharedInstance.sensorIdPayload)){
+                atLocation.text = "@ " + hubDescription[counter]
+                counter = hubDescription.count
+            }
+                
+            else{
+                counter++
+            }
+        }
+    
+    }
+    
+    
+    func dataQueryInhubs(){
+        var counter = 0;
+        var queryNews = PFQuery(className: "hubs")
+        
+        queryNews.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        var relations = object["Sensors"] as! NSArray
+                        var description = object["hub_description"] as! String
+                        self.hubRelations.append(relations.valueForKey("objectId")! as! NSArray)
+                        self.hubDescription.append(description)
+                    }
+                    
+                }
+                
+                self.setHubName()
+            }
+        }
+    }
+    
+    //Chart Stuff
+    
+    func setChart(dataPoints: [String], values: [Double]) {
+        var dataEntries: [ChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+            dataEntries.append(dataEntry)
+        }
+        
+        var colors: [UIColor] = []
+        
+        for i in 0..<dataPoints.count {
+            let red = Double(arc4random_uniform(256))
+            let green = Double(arc4random_uniform(256))
+            let blue = Double(arc4random_uniform(256))
+            
+            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+            colors.append(color)
+        }
+        
+        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Sold")
+        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+        lineChartData.setValueTextColor(UIColor.whiteColor())
+        lineChartView.data = lineChartData
+        lineChartView.descriptionText = ""
+        lineChartView.xAxis.labelPosition = .Bottom
+        lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        
+        
     }
 
 }

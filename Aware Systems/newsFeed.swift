@@ -12,8 +12,18 @@ import Parse
 class newsFeed: UIViewController{
     
     var itemIndex: Int = 0
-    
+    var at = "@ "
     var sensorId: String = ""
+    var hubName : String = "" {
+        
+        didSet {
+            
+            if let name = locationName {
+                name.text =  at + hubName
+            }
+            
+        }
+    }
     
     var sensorName: String = "" {
         
@@ -26,13 +36,16 @@ class newsFeed: UIViewController{
         }
     }
     
+    @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var newsName: UILabel!
 
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.newsName.text = sensorName
+        self.locationName.text = at + hubName
 
 
     }

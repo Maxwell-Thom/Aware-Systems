@@ -15,6 +15,12 @@ class SingletonB {
     var hubSelected: String = ""
     var sensorSelected: String = ""
     var newsName: String = ""
+    
+    //these variables are strictly for populating the log from the calendar
+    var sensorLoggingDates: [String] = []
+    var tableRowsBySelectedDay: Int = 0
+    var filteredDateIndices: [Int] = []
+    //var sensor
     class var sharedInstance : SingletonB {
         struct Static {
             static let instance : SingletonB = SingletonB()

@@ -15,11 +15,13 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
     
     var sensorIds :[String] = []
     var sensorNames :[String] = []
+    var hubDescription : [String] = []
+    var hubRelations : [NSArray] = []
     
     
     override func viewDidLoad() {
     
-    dataQueryInNews()
+        dataQueryInNews()
         
     }
     
@@ -85,11 +87,29 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
     
     private func getItemController(itemIndex: Int) -> newsFeed? {
         
+        var counter = 0
+        var hubName = ""
+        
         if itemIndex < sensorNames.count {
+
             let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("newsFeed") as! newsFeed
             pageItemController.itemIndex = itemIndex
             pageItemController.sensorId = sensorIds[itemIndex]
             pageItemController.sensorName = sensorNames[itemIndex]
+            
+            while(counter < hubDescription.count){
+                
+                if(self.hubRelations[counter].containsObject(sensorIds[itemIndex])){
+                    hubName = hubDescription[counter]
+                    counter = hubDescription.count
+                }
+                    
+                else{
+                    counter++
+                }
+            }
+            
+            pageItemController.hubName = hubName
             pageItemController.view.frame = self.view.frame;
             return pageItemController
         }
@@ -129,7 +149,30 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
                     }
                 }
             }
+            self.dataQueryInhubs()
             self.dataQueryInSensors(self.sensorIds, numberOfSensors: self.sensorIds.count )
+        }
+    }
+    
+    func dataQueryInhubs(){
+        var counter = 0;
+        var queryNews = PFQuery(className: "hubs")
+        
+        queryNews.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        var relations = object["Sensors"] as! NSArray
+                        var description = object["hub_description"] as! String
+                        self.hubRelations.append(relations.valueForKey("objectId")! as! NSArray)
+                        self.hubDescription.append(description)
+                    }
+                    
+                }
+            }
         }
     }
     
