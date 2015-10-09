@@ -29,7 +29,7 @@ class homeCell: UITableViewCell {
     
     @IBAction func armingSwitchAction(sender: AnyObject) {
         
-        var statusUpdate = PFObject(className: "sensors")
+        let statusUpdate = PFObject(className: "sensors")
         
         // set the object id of the PFobject to the object id of the selected cell
         statusUpdate.objectId = objectId

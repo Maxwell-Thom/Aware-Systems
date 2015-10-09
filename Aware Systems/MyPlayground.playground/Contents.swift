@@ -16,11 +16,9 @@ var request = NSMutableURLRequest(URL: NSURL(string: "https://mighty-brushlands-
     httpGet(request){
         (data, error) -> Void in
         if error != nil {
-            println(error)
+            print(error, terminator: "")
         } else {
-            println(data)
+            print(data, terminator: "")
         }
     }
-    XCPSetExecutionShouldContinueIndefinitely(continueIndefinitely: true)
-
-
+    XCPSetExecutionShouldContinueIndefinitely(tr,,

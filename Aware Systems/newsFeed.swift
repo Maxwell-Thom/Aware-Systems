@@ -11,6 +11,7 @@ import Parse
 
 class newsFeed: UIViewController{
     
+    
     var itemIndex: Int = 0
     var at = "@ "
     var sensorId: String = ""
@@ -46,7 +47,7 @@ class newsFeed: UIViewController{
         
         self.newsName.text = sensorName
         self.locationName.text = at + hubName
-
+        self.view.backgroundColor = UIColor.clearColor();
 
     }
 
@@ -57,8 +58,8 @@ class newsFeed: UIViewController{
         SingletonB.sharedInstance.sensorIdPayload = sensorId
         
         //change VC
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var viewController: sensorZoom = storyboard.instantiateViewControllerWithIdentifier("sensorZoom") as! sensorZoom
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController: sensorZoom = storyboard.instantiateViewControllerWithIdentifier("sensorZoom") as! sensorZoom
         
         UIApplication.sharedApplication().keyWindow!.rootViewController = viewController
         UIApplication.sharedApplication().keyWindow!.makeKeyAndVisible()

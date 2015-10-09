@@ -14,7 +14,6 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     //declare variables
     @IBOutlet var tableView: UITableView!
-    @IBOutlet weak var newsFeedLabel: UILabel!
     
 
     
@@ -50,13 +49,6 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
         self.sensorMovement.removeAll(keepCapacity: false)
         
         self.dataQuery()
-        
-        
-        let rectShape = CAShapeLayer()
-        rectShape.path = UIBezierPath(roundedRect: self.newsFeedLabel.bounds, byRoundingCorners: .TopLeft | .TopRight, cornerRadii: CGSize(width: 14, height: 14)).CGPath
-         self.newsFeedLabel.layer.mask = rectShape
-        
-        self.tableView.separatorColor = UIColor( red: 75/255, green: 168/255, blue:222/255, alpha: 1.0 )
 
     }
     
@@ -153,6 +145,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
         //use singleton variable to record which cell was selected, i use this in sensor details to set title.
         SingletonB.sharedInstance.sensorSelected = selectedSensorId[indexPath.row]
         
+        selectedSensorId.removeAll(keepCapacity: false)
         sensorDescription.removeAll(keepCapacity: false)
         
         // perform segue after setting sensorSelected
@@ -160,16 +153,16 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
    //controls and adds actions to cell
-   func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) ->[AnyObject]?{
+   func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) ->[UITableViewRowAction]?{
         // create two seperate actions, arm and disarm
         // declare action and specify title and type
-        var armAction = UITableViewRowAction(style: .Default, title: "Arm") { (action, indexPath) -> Void in
+        let armAction = UITableViewRowAction(style: .Default, title: "Arm") { (action, indexPath) -> Void in
             
             // enable editing on tableview
             tableView.editing = true
             // query database to update values
             // create PFobject for sensors table query
-            var statusUpdate = PFObject(className: "sensors")
+            let statusUpdate = PFObject(className: "sensors")
             
             // set the object id of the PFobject to the object id of the selected cell
             statusUpdate.objectId = self.selectedSensorId[indexPath.row]
@@ -196,10 +189,10 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
     armAction.backgroundColor = UIColor.greenColor()
     
     // see comments for armAction. the functionality is identical
-        var disarmAction = UITableViewRowAction(style: .Default, title: "Disarm") { (action, indexPath) -> Void in
+        let disarmAction = UITableViewRowAction(style: .Default, title: "Disarm") { (action, indexPath) -> Void in
         
             tableView.editing = true
-            var statusUpdate = PFObject(className: "sensors")
+            let statusUpdate = PFObject(className: "sensors")
             statusUpdate.objectId = self.selectedSensorId[indexPath.row]
             statusUpdate["arm_disarm"] = false;
         
@@ -242,7 +235,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
         // Do any additional setup after loading the view, typically from a nib.
         
         //specify class
-        var testQuery = PFQuery(className: "hubs")
+        let testQuery = PFQuery(className: "hubs")
         //specify which hub
         testQuery.whereKey("objectId", equalTo: self.hubSelectionLoader)
         // include relational array
@@ -257,9 +250,9 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                     
                     for object in objects {
                         //load array from query as nsarray
-                        var queryArr = object["Sensors"] as! NSArray
+                        let queryArr = object["Sensors"] as! NSArray
                         //count the array for loop and table size
-                        var loopCount = queryArr.count
+                        let loopCount = queryArr.count
                         self.rows = loopCount
                         //loop through queryArr
                         while(counter < loopCount){
@@ -283,6 +276,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                         }
                         
                     }
+                    
                     //reload table with new data
                     self.tableView.reloadData()
                 }
@@ -290,7 +284,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 
             else {
                 // Log details of the failure
-                println("Error: \(error!) \(error!.userInfo!)")
+                print("Error: \(error!) \(error!.userInfo)", terminator: "")
             }
         }
     }

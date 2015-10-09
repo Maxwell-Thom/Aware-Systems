@@ -20,7 +20,7 @@ class sensorDetails: UIViewController {
     @IBOutlet weak var sensorStatus: UILabel!
     @IBOutlet weak var menuView: CVCalendarMenuView!
     @IBOutlet weak var calendarView: CVCalendarView!
-
+    @IBOutlet weak var backButton: UIButton!
     
     var shouldShowDaysOut = true
     var animationFinished = true
@@ -43,6 +43,8 @@ class sensorDetails: UIViewController {
             dataQuery()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadFunction:", name:"reloadTableView", object: nil)
+        backButton.layer.cornerRadius = 10
+        backButton.layer.masksToBounds = true
         
     }
     
@@ -59,7 +61,7 @@ class sensorDetails: UIViewController {
     //arm/disarm toggle functionality
     @IBAction func armingSwitch(sender: AnyObject) {
         
-        var statusUpdate = PFObject(className: "sensors")
+        let statusUpdate = PFObject(className: "sensors")
         
         // set the object id of the PFobject to the object id of the selected cell
         statusUpdate.objectId = SingletonB.sharedInstance.sensorSelected
@@ -109,7 +111,7 @@ class sensorDetails: UIViewController {
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var index = SingletonB.sharedInstance.filteredDateIndices[indexPath.row]
+        let index = SingletonB.sharedInstance.filteredDateIndices[indexPath.row]
         // create cell of homeCell type
         let cell:loggingCell = self.tableView.dequeueReusableCellWithIdentifier("loggingCell") as! loggingCell
         // return instance of cell
@@ -122,7 +124,7 @@ class sensorDetails: UIViewController {
     func dataQuery()
     {
         self.sensorSelectionLoader = SingletonB.sharedInstance.sensorSelected
-        var query = PFQuery(className:"sensors")
+        let query = PFQuery(className:"sensors")
         query.whereKey("objectId", equalTo:sensorSelectionLoader)
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
@@ -204,13 +206,13 @@ class sensorDetails: UIViewController {
                 }
             } else {
                 // Log details of the failure
-                println("Error: \(error!) \(error!.userInfo!)")
+                print("Error: \(error!) \(error!.userInfo)", terminator: "")
             }
         }
         
 
     
-        var queryLogging = PFQuery(className:"logging");
+        let queryLogging = PFQuery(className:"logging");
         queryLogging.whereKey("sensorId", equalTo:sensorSelectionLoader)
         queryLogging.findObjectsInBackgroundWithBlock {
         (objects: [AnyObject]?, error: NSError?) -> Void in
@@ -222,12 +224,12 @@ class sensorDetails: UIViewController {
                     for object in objects {
                     // intermediate variables to change datatype to string
                     let code = object["eventCode"] as! Int
-                    var creation = object.createdAt!
+                    let creation = object.createdAt!
                     let dateFormatter = NSDateFormatter()
                     dateFormatter.dateFormat = "yyyy'-'MM'-'dd' 'HH':'mm"
                     let temp = dateFormatter.stringFromDate(creation)
-                    let date = temp.substringWithRange(Range<String.Index>(start: temp.startIndex, end: advance(temp.endIndex, -6)))
-                    let time = temp.substringWithRange(Range<String.Index>(start: advance(temp.startIndex, +11), end: temp.endIndex))
+                    let date = temp.substringWithRange(Range<String.Index>(start: temp.startIndex, end: temp.endIndex.advancedBy(-6)))
+                    let time = temp.substringWithRange(Range<String.Index>(start: temp.startIndex.advancedBy(+11), end: temp.endIndex))
                     self.loggingCodes.append(code)
                     self.loggingDates.append(date)
                     SingletonB.sharedInstance.sensorLoggingDates.append(date)
@@ -236,7 +238,7 @@ class sensorDetails: UIViewController {
                 }
             } else {
             // Log details of the failure
-            println("Error: \(error!) \(error!.userInfo!)")
+            print("Error: \(error!) \(error!.userInfo)", terminator: "")
             }
         }
         
@@ -296,16 +298,16 @@ extension sensorDetails: CVCalendarViewDelegate {
             
             let seconds = 1.0
             let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-            var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             
             dispatch_after(dispatchTime, dispatch_get_main_queue(), {
                 var counter = 0
                 SingletonB.sharedInstance.filteredDateIndices.removeAll(keepCapacity: false)
                 let temp = dayView.date
-                var tempTwo = self.calendarView.presentedDate.convertedDate()!
+                let tempTwo = self.calendarView.presentedDate.convertedDate()!
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateFormat = "yyyy'-'MM'-'dd"
-                var date = dateFormatter.stringFromDate(tempTwo)
+                let date = dateFormatter.stringFromDate(tempTwo)
                 var filteredDates:[String] = []
             
                 for item in SingletonB.sharedInstance.sensorLoggingDates{
@@ -340,10 +342,10 @@ extension sensorDetails: CVCalendarViewDelegate {
         var counter = 0
         SingletonB.sharedInstance.filteredDateIndices.removeAll(keepCapacity: false)
         let temp = dayView.date
-        var tempTwo = calendarView.presentedDate.convertedDate()!
+        let tempTwo = calendarView.presentedDate.convertedDate()!
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy'-'MM'-'dd"
-        var date = dateFormatter.stringFromDate(tempTwo)
+        let date = dateFormatter.stringFromDate(tempTwo)
         var filteredDates:[String] = []
         
         for item in SingletonB.sharedInstance.sensorLoggingDates{

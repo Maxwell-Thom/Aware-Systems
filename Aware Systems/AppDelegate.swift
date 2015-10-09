@@ -45,12 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         if application.respondsToSelector("registerUserNotificationSettings:") {
-            let userNotificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+            let userNotificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
             let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
             application.registerUserNotificationSettings(settings)
             application.registerForRemoteNotifications()
         } else {
-            let types = UIRemoteNotificationType.Badge | UIRemoteNotificationType.Alert | UIRemoteNotificationType.Sound
+            let types: UIRemoteNotificationType = [UIRemoteNotificationType.Badge, UIRemoteNotificationType.Alert, UIRemoteNotificationType.Sound]
             application.registerForRemoteNotificationTypes(types)
         }
         
@@ -76,9 +76,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         if error.code == 3010 {
-            println("Push notifications are not supported in the iOS Simulator.")
+            print("Push notifications are not supported in the iOS Simulator.", terminator: "")
         } else {
-            println("application:didFailToRegisterForRemoteNotificationsWithError: %@", error)
+            print("application:didFailToRegisterForRemoteNotificationsWithError: %@", error, terminator: "")
         }
     }
     
@@ -94,8 +94,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SingletonB.sharedInstance.sensorIdPayload = userInfo["sensorId"] as! String
         
         //change VC
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var viewController: sensorZoom = storyboard.instantiateViewControllerWithIdentifier("sensorZoom") as! sensorZoom
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController: sensorZoom = storyboard.instantiateViewControllerWithIdentifier("sensorZoom") as! sensorZoom
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
         

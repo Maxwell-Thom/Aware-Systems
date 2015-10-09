@@ -8,9 +8,9 @@
 
 import UIKit
 import Parse
-import Charts
+//import Charts
 
-class sensorZoom: UIViewController {
+class sensorZoom: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var sensorName: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -19,7 +19,7 @@ class sensorZoom: UIViewController {
     @IBOutlet weak var makeCall: UIButton!
     @IBOutlet weak var Escalate: UIButton!
     @IBOutlet weak var silenceAlert: UIButton!
-    @IBOutlet weak var lineChartView: LineChartView!
+   // @IBOutlet weak var lineChartView: LineChartView!
     
     var hubDescription : [String] = []
     var hubRelations : [NSArray] = []
@@ -33,17 +33,32 @@ class sensorZoom: UIViewController {
         self.dataQueryInhubs()
         
         //chart stuff
-        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let unitsSold = [17.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-        
-        setChart(months, values: unitsSold)
         
         makeCall.layer.cornerRadius = 15
         sendText.layer.cornerRadius = 15
         Escalate.layer.cornerRadius = 15
         silenceAlert.layer.cornerRadius = 15
-        self.tableView.separatorColor = UIColor( red: 75/255, green: 168/255, blue:222/255, alpha: 1.0 )
+        self.tableView.separatorColor = UIColor( red: 128/255, green: 128/255, blue:128/255, alpha: 1.0 )
+
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if let popupView = segue.destinationViewController as? UIViewController
+        {
+            if let popup = popupView.popoverPresentationController
+            {
+                popup.delegate = self
+            }
+        }
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    {
+        return UIModalPresentationStyle.None
+    }
+ 
+    
     
     // set number of rows in tableview
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -62,7 +77,7 @@ class sensorZoom: UIViewController {
     // action for silence alert button
     @IBAction func silenceAlert(sender: AnyObject) {
         // create pfobject
-        var statusUpdate = PFObject(className: "sensors")
+        let statusUpdate = PFObject(className: "sensors")
         // get id from notification payload through singleton method, put into pfobject
         statusUpdate.objectId = SingletonB.sharedInstance.sensorIdPayload
         // set movement_flag to false inside of pfobject
@@ -78,14 +93,14 @@ class sensorZoom: UIViewController {
                 //segue
                 self.presentViewController(destinationViewController, animated: true, completion:nil)
                 // The object has been saved.
-                println("saved!")
+                print("saved!", terminator: "")
             } else {
                 // There was a problem, check error.description
             }
         }
         
         // create query
-        var deleteNews = PFQuery(className: "news")
+        let deleteNews = PFQuery(className: "news")
         deleteNews.whereKey("sensorId", equalTo: SingletonB.sharedInstance.sensorIdPayload)
         deleteNews.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
@@ -124,8 +139,7 @@ class sensorZoom: UIViewController {
     
     
     func dataQueryInhubs(){
-        var counter = 0;
-        var queryNews = PFQuery(className: "hubs")
+        let queryNews = PFQuery(className: "hubs")
         
         queryNews.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
@@ -134,9 +148,9 @@ class sensorZoom: UIViewController {
                 // Do something with the found objects
                 if let objects = objects as? [PFObject] {
                     for object in objects {
-                        var relations = object["Sensors"] as! NSArray
-                        var description = object["hub_description"] as! String
-                        self.hubRelations.append(relations.valueForKey("objectId")! as! NSArray)
+                        let relations = object["Sensors"] as! NSArray
+                        let description = object["hub_description"] as! String
+                        self.hubRelations.append(relations.valueForKey("objectId") as! NSArray)
                         self.hubDescription.append(description)
                     }
                     
@@ -149,7 +163,7 @@ class sensorZoom: UIViewController {
     
     //Chart Stuff
     
-    func setChart(dataPoints: [String], values: [Double]) {
+    /*func setChart(dataPoints: [String], values: [Double]) {
         var dataEntries: [ChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
@@ -177,6 +191,6 @@ class sensorZoom: UIViewController {
         lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
         
         
-    }
+    }*/
 
 }

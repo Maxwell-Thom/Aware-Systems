@@ -22,7 +22,8 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
     override func viewDidLoad() {
     
         dataQueryInNews()
-        
+        let imageView = UIImageView(frame: view.bounds)
+        self.view.backgroundColor = UIColor.clearColor();
     }
     
     func intiliazePageController(){
@@ -34,13 +35,13 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
         if sensorNames.count > 0 {
             let firstController = getItemController(0)!
             let startingViewController: NSArray = [firstController]
-            pageController.setViewControllers(startingViewController as [AnyObject], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+            pageController.setViewControllers(startingViewController as? [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         }
         
         if sensorNames.count == 0 {
             let firstController = self.storyboard!.instantiateViewControllerWithIdentifier("noNews") as! noNews
             let startingViewController: NSArray = [firstController]
-            pageController.setViewControllers(startingViewController as [AnyObject], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+            pageController.setViewControllers(startingViewController as? [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         }
         
         pageViewController = pageController
@@ -135,7 +136,7 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
     
     func dataQueryInNews(){
         
-        var queryNews = PFQuery(className: "news")
+        let queryNews = PFQuery(className: "news")
         
         queryNews.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
@@ -144,7 +145,7 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
                 // Do something with the found objects
                 if let objects = objects as? [PFObject] {
                     for object in objects {
-                        var sensors = object["sensorId"] as! String
+                        let sensors = object["sensorId"] as! String
                         self.sensorIds.append(sensors)
                     }
                 }
@@ -156,7 +157,7 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
     
     func dataQueryInhubs(){
         var counter = 0;
-        var queryNews = PFQuery(className: "hubs")
+        let queryNews = PFQuery(className: "hubs")
         
         queryNews.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
@@ -165,9 +166,9 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
                 // Do something with the found objects
                 if let objects = objects as? [PFObject] {
                     for object in objects {
-                        var relations = object["Sensors"] as! NSArray
-                        var description = object["hub_description"] as! String
-                        self.hubRelations.append(relations.valueForKey("objectId")! as! NSArray)
+                        let relations = object["Sensors"] as! NSArray
+                        let description = object["hub_description"] as! String
+                        self.hubRelations.append(relations.valueForKey("objectId") as! NSArray)
                         self.hubDescription.append(description)
                     }
                     
@@ -177,15 +178,15 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func dataQueryInSensors(sensorId:[String], numberOfSensors:Int){
-        var querySensors = PFQuery(className: "sensors")
+        let querySensors = PFQuery(className: "sensors")
         var counter = 0;
         while(counter < numberOfSensors){
             querySensors.whereKey("objectId", equalTo: sensorId[counter])
             
-            var objects = querySensors.findObjects() as! [PFObject]
+            let objects = querySensors.findObjects() as! [PFObject]
             
             for object in objects {
-                var names = object["sensor_description"] as! String
+                let names = object["sensor_description"] as! String
                 self.sensorNames.append(names)
                 
             }

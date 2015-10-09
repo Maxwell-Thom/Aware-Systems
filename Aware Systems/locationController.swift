@@ -25,7 +25,7 @@ class locationController: UIViewController, UIPickerViewDataSource, UIPickerView
         //declare variables
         var counter: Int = 0
         //create PFQuery object
-        var query = PFQuery(className:"hubs")
+        let query = PFQuery(className:"hubs")
         //search query for all objects in hubs table
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
@@ -87,10 +87,10 @@ class locationController: UIViewController, UIPickerViewDataSource, UIPickerView
         return pickerData[row] as String
     }
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         let pickerLabel = UILabel()
         let titleData = pickerData[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Avenir Next Medium", size: 26.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Avenir Next Medium", size: 26.0)!,NSForegroundColorAttributeName:UIColor( red: 128/255, green: 128/255, blue:128/255, alpha: 1.0 )])
         pickerLabel.attributedText = myTitle
         return pickerLabel
     }
