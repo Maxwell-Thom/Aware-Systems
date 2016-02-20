@@ -11,8 +11,7 @@ import Parse
 
 class pageController: UIViewController, UIPageViewControllerDataSource {
     
-     private var pageViewController: UIPageViewController?
-    
+    private var pageViewController: UIPageViewController?
     var sensorIds :[String] = []
     var sensorNames :[String] = []
     var hubDescription : [String] = []
@@ -20,7 +19,12 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
     
     
     override func viewDidLoad() {
-    
+        super.viewDidLoad()
+        self.sensorIds.removeAll(keepCapacity: false)
+        self.sensorNames.removeAll(keepCapacity: false)
+        self.hubDescription.removeAll(keepCapacity: false)
+        self.hubRelations.removeAll(keepCapacity: false)
+       
         dataQueryInNews()
         let imageView = UIImageView(frame: view.bounds)
         self.view.backgroundColor = UIColor.clearColor();
@@ -51,6 +55,7 @@ class pageController: UIViewController, UIPageViewControllerDataSource {
 
     }
     
+     
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         

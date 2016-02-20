@@ -23,49 +23,42 @@
 		CF374F9D1B2786C600B6514E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F9C1B2786C600B6514E /* SystemConfiguration.framework */; };
 		CF374FA31B27870500B6514E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374FA21B27870500B6514E /* Accounts.framework */; };
 		CF374FA51B27870F00B6514E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374FA41B27870F00B6514E /* Social.framework */; };
-		CF3895061BC734B5004BCE3B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F811B2785E400B6514E /* Parse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		CF4D5E1B1BA76E4300E37CC8 /* AwareLogoSplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF4D5E1A1BA76E4300E37CC8 /* AwareLogoSplash.jpg */; };
 		CF4D5E1E1BA7850F00E37CC8 /* awaresys_steel01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF4D5E1D1BA7850F00E37CC8 /* awaresys_steel01.jpg */; };
 		CF4D5E201BA78D5F00E37CC8 /* awaresys_arrows01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF4D5E1F1BA78D5F00E37CC8 /* awaresys_arrows01.jpg */; };
 		CF52A42B1BC63FD300C97030 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52A42A1BC63FD300C97030 /* libsqlite3.0.tbd */; };
 		CF52A42D1BC63FDF00C97030 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52A42C1BC63FDF00C97030 /* libsqlite3.tbd */; };
-		CF52A4491BC7347C00C97030 /* CVAuxiliaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A42F1BC7347C00C97030 /* CVAuxiliaryView.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A44A1BC7347C00C97030 /* CVCalendarContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4301BC7347C00C97030 /* CVCalendarContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A44B1BC7347C00C97030 /* CVCalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4311BC7347C00C97030 /* CVCalendarDayView.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A44C1BC7347C00C97030 /* CVCalendarDayViewControlCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4321BC7347C00C97030 /* CVCalendarDayViewControlCoordinator.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A44D1BC7347C00C97030 /* CVCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4331BC7347C00C97030 /* CVCalendarManager.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A44E1BC7347C00C97030 /* CVCalendarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4341BC7347C00C97030 /* CVCalendarMenuView.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A44F1BC7347C00C97030 /* CVCalendarMenuViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4351BC7347C00C97030 /* CVCalendarMenuViewDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4501BC7347C00C97030 /* CVCalendarMonthContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4361BC7347C00C97030 /* CVCalendarMonthContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4511BC7347C00C97030 /* CVCalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4371BC7347C00C97030 /* CVCalendarMonthView.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4521BC7347C00C97030 /* CVCalendarTouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4381BC7347C00C97030 /* CVCalendarTouchController.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4531BC7347C00C97030 /* CVCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4391BC7347C00C97030 /* CVCalendarView.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4541BC7347C00C97030 /* CVCalendarViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43A1BC7347C00C97030 /* CVCalendarViewAnimator.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4551BC7347C00C97030 /* CVCalendarViewAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43B1BC7347C00C97030 /* CVCalendarViewAnimatorDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4561BC7347C00C97030 /* CVCalendarViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43C1BC7347C00C97030 /* CVCalendarViewAppearance.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4571BC7347C00C97030 /* CVCalendarViewAppearanceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43D1BC7347C00C97030 /* CVCalendarViewAppearanceDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4581BC7347C00C97030 /* CVCalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43E1BC7347C00C97030 /* CVCalendarViewDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4591BC7347C00C97030 /* CVCalendarViewPresentationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43F1BC7347C00C97030 /* CVCalendarViewPresentationMode.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A45A1BC7347C00C97030 /* CVCalendarWeekContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4401BC7347C00C97030 /* CVCalendarWeekContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A45B1BC7347C00C97030 /* CVCalendarWeekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4411BC7347C00C97030 /* CVCalendarWeekday.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A45C1BC7347C00C97030 /* CVCalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4421BC7347C00C97030 /* CVCalendarWeekView.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A45D1BC7347C00C97030 /* CVDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4431BC7347C00C97030 /* CVDate.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A45E1BC7347C00C97030 /* CVRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4441BC7347C00C97030 /* CVRange.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A45F1BC7347C00C97030 /* CVScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4451BC7347C00C97030 /* CVScrollDirection.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4601BC7347C00C97030 /* CVSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4461BC7347C00C97030 /* CVSelectionType.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4611BC7347C00C97030 /* CVSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4471BC7347C00C97030 /* CVSet.swift */; settings = {ASSET_TAGS = (); }; };
-		CF52A4621BC7347C00C97030 /* CVShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4481BC7347C00C97030 /* CVShape.swift */; settings = {ASSET_TAGS = (); }; };
+		CF52A4491BC7347C00C97030 /* CVAuxiliaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A42F1BC7347C00C97030 /* CVAuxiliaryView.swift */; };
+		CF52A44A1BC7347C00C97030 /* CVCalendarContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4301BC7347C00C97030 /* CVCalendarContentViewController.swift */; };
+		CF52A44B1BC7347C00C97030 /* CVCalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4311BC7347C00C97030 /* CVCalendarDayView.swift */; };
+		CF52A44C1BC7347C00C97030 /* CVCalendarDayViewControlCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4321BC7347C00C97030 /* CVCalendarDayViewControlCoordinator.swift */; };
+		CF52A44D1BC7347C00C97030 /* CVCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4331BC7347C00C97030 /* CVCalendarManager.swift */; };
+		CF52A44E1BC7347C00C97030 /* CVCalendarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4341BC7347C00C97030 /* CVCalendarMenuView.swift */; };
+		CF52A44F1BC7347C00C97030 /* CVCalendarMenuViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4351BC7347C00C97030 /* CVCalendarMenuViewDelegate.swift */; };
+		CF52A4501BC7347C00C97030 /* CVCalendarMonthContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4361BC7347C00C97030 /* CVCalendarMonthContentViewController.swift */; };
+		CF52A4511BC7347C00C97030 /* CVCalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4371BC7347C00C97030 /* CVCalendarMonthView.swift */; };
+		CF52A4521BC7347C00C97030 /* CVCalendarTouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4381BC7347C00C97030 /* CVCalendarTouchController.swift */; };
+		CF52A4531BC7347C00C97030 /* CVCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4391BC7347C00C97030 /* CVCalendarView.swift */; };
+		CF52A4541BC7347C00C97030 /* CVCalendarViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43A1BC7347C00C97030 /* CVCalendarViewAnimator.swift */; };
+		CF52A4551BC7347C00C97030 /* CVCalendarViewAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43B1BC7347C00C97030 /* CVCalendarViewAnimatorDelegate.swift */; };
+		CF52A4561BC7347C00C97030 /* CVCalendarViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43C1BC7347C00C97030 /* CVCalendarViewAppearance.swift */; };
+		CF52A4571BC7347C00C97030 /* CVCalendarViewAppearanceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43D1BC7347C00C97030 /* CVCalendarViewAppearanceDelegate.swift */; };
+		CF52A4581BC7347C00C97030 /* CVCalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43E1BC7347C00C97030 /* CVCalendarViewDelegate.swift */; };
+		CF52A4591BC7347C00C97030 /* CVCalendarViewPresentationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A43F1BC7347C00C97030 /* CVCalendarViewPresentationMode.swift */; };
+		CF52A45A1BC7347C00C97030 /* CVCalendarWeekContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4401BC7347C00C97030 /* CVCalendarWeekContentViewController.swift */; };
+		CF52A45B1BC7347C00C97030 /* CVCalendarWeekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4411BC7347C00C97030 /* CVCalendarWeekday.swift */; };
+		CF52A45C1BC7347C00C97030 /* CVCalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4421BC7347C00C97030 /* CVCalendarWeekView.swift */; };
+		CF52A45D1BC7347C00C97030 /* CVDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4431BC7347C00C97030 /* CVDate.swift */; };
+		CF52A45E1BC7347C00C97030 /* CVRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4441BC7347C00C97030 /* CVRange.swift */; };
+		CF52A45F1BC7347C00C97030 /* CVScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4451BC7347C00C97030 /* CVScrollDirection.swift */; };
+		CF52A4601BC7347C00C97030 /* CVSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4461BC7347C00C97030 /* CVSelectionType.swift */; };
+		CF52A4611BC7347C00C97030 /* CVSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4471BC7347C00C97030 /* CVSet.swift */; };
+		CF52A4621BC7347C00C97030 /* CVShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF52A4481BC7347C00C97030 /* CVShape.swift */; };
 		CF58E85A1B93CE8700CACB55 /* noNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58E8591B93CE8700CACB55 /* noNews.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CF6F1F641C6E970D001FD2B2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF374F811B2785E400B6514E /* Parse.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CF73F2121B0FAFB60092A73C /* BoilerPlate UIKit class.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73F2111B0FAFB60092A73C /* BoilerPlate UIKit class.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CF96B85E1B8A864B0008B055 /* pageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF96B85D1B8A864B0008B055 /* pageController.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CF96B8661B8BAEB60008B055 /* newsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF96B8651B8BAEB60008B055 /* newsFeed.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
-		CFB806221B7A7BCE00CC6249 /* Empty Battery-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806211B7A7BCE00CC6249 /* Empty Battery-32.png */; };
-		CFB806241B7A7BD900CC6249 /* Full Battery-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806231B7A7BD900CC6249 /* Full Battery-32.png */; };
-		CFB806261B7A7BE300CC6249 /* Charged Battery-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806251B7A7BE300CC6249 /* Charged Battery-32.png */; };
-		CFB806281B7A7BF000CC6249 /* Half-Charged Battery-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806271B7A7BF000CC6249 /* Half-Charged Battery-32.png */; };
-		CFB8062A1B7A7BFB00CC6249 /* Low Battery-32-3.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB806291B7A7BFB00CC6249 /* Low Battery-32-3.png */; };
-		CFB8062C1B7A877200CC6249 /* Wi-Fi Filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB8062B1B7A877200CC6249 /* Wi-Fi Filled-32.png */; };
-		CFB8062E1B7A877A00CC6249 /* Wi-Fi-32.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB8062D1B7A877A00CC6249 /* Wi-Fi-32.png */; };
 		CFB806661B810A9C00CC6249 /* locationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB806651B810A9C00CC6249 /* locationController.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CFB806681B826D4A00CC6249 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB806671B826D4A00CC6249 /* Images-2.xcassets */; };
 		CFB806741B868C0600CC6249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB806731B868C0600CC6249 /* Main.storyboard */; };
@@ -77,6 +70,10 @@
 		CFD086701BA4C955004FBF82 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0866F1BA4C955004FBF82 /* UIColor.swift */; };
 		CFD086721BA60609004FBF82 /* popUpViewControllerText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD086711BA60609004FBF82 /* popUpViewControllerText.swift */; };
 		CFE22B411B39E07300C7E58A /* dataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE22B401B39E07300C7E58A /* dataManager.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CFE4BF5A1BEB08A90071D97B /* awaresys_firearm_icon02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE4BF591BEB08A90071D97B /* awaresys_firearm_icon02.jpg */; };
+		CFE4BF5C1BEB08BC0071D97B /* awaresys_jewelry_icon02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE4BF5B1BEB08BC0071D97B /* awaresys_jewelry_icon02.jpg */; };
+		CFE4BF5E1BEB08CA0071D97B /* awaresys_liquor_icon02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE4BF5D1BEB08CA0071D97B /* awaresys_liquor_icon02.jpg */; };
+		CFE4BF601BEB08D80071D97B /* awaresys_medicine_icon02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE4BF5F1BEB08D80071D97B /* awaresys_medicine_icon02.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +176,10 @@
 		CFD0866F1BA4C955004FBF82 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CFD086711BA60609004FBF82 /* popUpViewControllerText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popUpViewControllerText.swift; sourceTree = "<group>"; };
 		CFE22B401B39E07300C7E58A /* dataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataManager.swift; sourceTree = "<group>"; };
+		CFE4BF591BEB08A90071D97B /* awaresys_firearm_icon02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awaresys_firearm_icon02.jpg; sourceTree = "<group>"; };
+		CFE4BF5B1BEB08BC0071D97B /* awaresys_jewelry_icon02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awaresys_jewelry_icon02.jpg; sourceTree = "<group>"; };
+		CFE4BF5D1BEB08CA0071D97B /* awaresys_liquor_icon02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awaresys_liquor_icon02.jpg; sourceTree = "<group>"; };
+		CFE4BF5F1BEB08D80071D97B /* awaresys_medicine_icon02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awaresys_medicine_icon02.jpg; sourceTree = "<group>"; };
 		CFEA46C71B1D402F0042D996 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = "../Aware Systems/Podfile"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,8 +198,8 @@
 				CF374F971B2786A200B6514E /* QuartzCore.framework in Frameworks */,
 				CF374F951B27869700B6514E /* MobileCoreServices.framework in Frameworks */,
 				CF374F931B27868C00B6514E /* CoreLocation.framework in Frameworks */,
+				CF6F1F641C6E970D001FD2B2 /* Parse.framework in Frameworks */,
 				CF374F861B2785E400B6514E /* Bolts.framework in Frameworks */,
-				CF3895061BC734B5004BCE3B /* Parse.framework in Frameworks */,
 				CF374F911B27867E00B6514E /* CoreGraphics.framework in Frameworks */,
 				CF374F8F1B27867400B6514E /* CFNetwork.framework in Frameworks */,
 				CF374F8D1B27866700B6514E /* AudioToolbox.framework in Frameworks */,
@@ -324,6 +325,10 @@
 		CFB806201B7A7BB700CC6249 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CFE4BF5F1BEB08D80071D97B /* awaresys_medicine_icon02.jpg */,
+				CFE4BF5D1BEB08CA0071D97B /* awaresys_liquor_icon02.jpg */,
+				CFE4BF5B1BEB08BC0071D97B /* awaresys_jewelry_icon02.jpg */,
+				CFE4BF591BEB08A90071D97B /* awaresys_firearm_icon02.jpg */,
 				CF4D5E1D1BA7850F00E37CC8 /* awaresys_steel01.jpg */,
 				CF4D5E1A1BA76E4300E37CC8 /* AwareLogoSplash.jpg */,
 				CFB8062D1B7A877A00CC6249 /* Wi-Fi-32.png */,
@@ -463,6 +468,7 @@
 					};
 					CFC03D891B0E6AA800A7CE6B = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = UT7G3LKZ29;
 						TestTargetID = CFC03D741B0E6AA700A7CE6B;
 					};
 				};
@@ -491,19 +497,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB806261B7A7BE300CC6249 /* Charged Battery-32.png in Resources */,
+				CFE4BF5C1BEB08BC0071D97B /* awaresys_jewelry_icon02.jpg in Resources */,
 				CF4D5E1B1BA76E4300E37CC8 /* AwareLogoSplash.jpg in Resources */,
+				CFE4BF5A1BEB08A90071D97B /* awaresys_firearm_icon02.jpg in Resources */,
 				CFB806741B868C0600CC6249 /* Main.storyboard in Resources */,
 				CF4D5E1E1BA7850F00E37CC8 /* awaresys_steel01.jpg in Resources */,
 				CFC03D851B0E6AA700A7CE6B /* LaunchScreen.xib in Resources */,
-				CFB8062E1B7A877A00CC6249 /* Wi-Fi-32.png in Resources */,
-				CFB806241B7A7BD900CC6249 /* Full Battery-32.png in Resources */,
-				CFB806221B7A7BCE00CC6249 /* Empty Battery-32.png in Resources */,
-				CFB8062A1B7A7BFB00CC6249 /* Low Battery-32-3.png in Resources */,
-				CFB806281B7A7BF000CC6249 /* Half-Charged Battery-32.png in Resources */,
 				CF4D5E201BA78D5F00E37CC8 /* awaresys_arrows01.jpg in Resources */,
+				CFE4BF5E1BEB08CA0071D97B /* awaresys_liquor_icon02.jpg in Resources */,
 				CFB806681B826D4A00CC6249 /* Images-2.xcassets in Resources */,
-				CFB8062C1B7A877200CC6249 /* Wi-Fi Filled-32.png in Resources */,
+				CFE4BF601BEB08D80071D97B /* awaresys_medicine_icon02.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,8 +615,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Larry Crapo (88M646B6TE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Larry Crapo (88M646B6TE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Aware Systems LLC (X46L7HD23P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Aware Systems LLC (X46L7HD23P)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -636,6 +639,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -658,8 +662,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Larry Crapo (88M646B6TE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Larry Crapo (88M646B6TE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Aware Systems LLC (X46L7HD23P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Aware Systems LLC (X46L7HD23P)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -674,6 +678,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -686,11 +691,25 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
 					"$(PROJECT_DIR)/Aware",
 					Systems,
 					"$(PROJECT_DIR)/Aware",
@@ -779,7 +798,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwareSystems.AwareSystems;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "836d8f51-b81d-438f-b8a4-6c38fd371708";
 				SWIFT_OBJC_BRIDGING_HEADER = "Aware Systems/Aware Systems-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -792,11 +811,25 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
+					"$(PROJECT_DIR)/Aware",
+					Systems,
 					"$(PROJECT_DIR)/Aware",
 					Systems,
 					"$(PROJECT_DIR)/Aware",
@@ -885,7 +918,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwareSystems.AwareSystems;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "836d8f51-b81d-438f-b8a4-6c38fd371708";
 				SWIFT_OBJC_BRIDGING_HEADER = "Aware Systems/Aware Systems-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -895,6 +928,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -908,6 +943,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AwareSystemsLLC.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -915,6 +951,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -924,6 +962,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AwareSystemsLLC.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

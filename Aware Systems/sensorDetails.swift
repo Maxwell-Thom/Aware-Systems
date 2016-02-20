@@ -11,9 +11,11 @@ import Parse
 
 class sensorDetails: UIViewController {
     
+    
     //declare variables
     @IBOutlet weak var statusToggle: UISwitch!
     @IBOutlet weak var sensorName: UILabel!
+    @IBOutlet weak var hubName: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sensorReception: UIImageView!
     @IBOutlet weak var sensorBattery: UIImageView!
@@ -22,7 +24,10 @@ class sensorDetails: UIViewController {
     @IBOutlet weak var calendarView: CVCalendarView!
     @IBOutlet weak var backButton: UIButton!
     
-    var shouldShowDaysOut = true
+    var hubDescription : [String] = []
+    var hubId : [String] = []
+    
+    var shouldShowDaysOut = false
     var animationFinished = true
     
     var sensorSelectionLoader = ""
@@ -40,8 +45,8 @@ class sensorDetails: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
             
-            dataQuery()
-        
+        dataQuery()
+        dataQueryInhubs()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadFunction:", name:"reloadTableView", object: nil)
         backButton.layer.cornerRadius = 10
         backButton.layer.masksToBounds = true
@@ -123,6 +128,7 @@ class sensorDetails: UIViewController {
     
     func dataQuery()
     {
+        print(SingletonB.sharedInstance.sensorSelected)
         self.sensorSelectionLoader = SingletonB.sharedInstance.sensorSelected
         let query = PFQuery(className:"sensors")
         query.whereKey("objectId", equalTo:sensorSelectionLoader)
@@ -165,7 +171,7 @@ class sensorDetails: UIViewController {
                             self.sensorStatus.textColor = UIColor.redColor()
                         }
                         
-                        //set battery status
+                        /*set battery status
                         if(self.sensorBatteryLevel == 0)
                         {
                             self.sensorBattery.image = UIImage(named: "Empty Battery-32.png")!
@@ -173,7 +179,7 @@ class sensorDetails: UIViewController {
                             
                         else if (self.sensorBatteryLevel == 1)
                         {
-                            self.sensorBattery.image = UIImage(named: "Low Battery-32-3.png")!
+                            //self.sensorBattery.image = UIImage(named: "Low Battery-32-3.png")!
                         }
                             
                         else if (self.sensorBatteryLevel == 2)
@@ -200,9 +206,8 @@ class sensorDetails: UIViewController {
                         else if (self.sensorReceptionLevel == 1)
                         {
                             self.sensorReception.image = UIImage(named: "Wi-Fi Filled-32.png")!
-                        }
+                        }*/
                     }
-                    
                 }
             } else {
                 // Log details of the failure
@@ -218,6 +223,7 @@ class sensorDetails: UIViewController {
         (objects: [AnyObject]?, error: NSError?) -> Void in
     
             if error == nil {
+                
             // The find succeeded.
             // Do something with the found objects
                 if let objects = objects as? [PFObject] {
@@ -282,15 +288,58 @@ class sensorDetails: UIViewController {
     }
     
     func reloadFunction(notification: NSNotification){
+        
        tableView.reloadData()
 
+    }
+    
+    func setHubName(){
+        
+        var counter = 0
+        
+        while(counter < hubDescription.count){
+            
+            if(self.hubId[counter] == SingletonB.sharedInstance.hubSelected){
+                hubName.text = "@ " + hubDescription[counter]
+                counter = hubDescription.count
+            }
+                
+            else{
+                counter++
+            }
+        }
+        
+    }
+
+    
+    func dataQueryInhubs(){
+        let queryNews = PFQuery(className: "hubs")
+        
+        queryNews.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        let relations = object.objectId as String?
+                        let description = object["hub_description"] as! String
+                        self.hubId.append(relations!)
+                        self.hubDescription.append(description)
+                    }
+                    
+                }
+                
+                self.setHubName()
+            }
+        }
     }
 }
 
 
 
 
-extension sensorDetails: CVCalendarViewDelegate {
+extension sensorDetails: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     
     
     func preliminaryView(shouldDisplayOnDayView dayView: DayView) -> Bool {
@@ -303,12 +352,12 @@ extension sensorDetails: CVCalendarViewDelegate {
             dispatch_after(dispatchTime, dispatch_get_main_queue(), {
                 var counter = 0
                 SingletonB.sharedInstance.filteredDateIndices.removeAll(keepCapacity: false)
-                let temp = dayView.date
+                //let temp = dayView.date
                 let tempTwo = self.calendarView.presentedDate.convertedDate()!
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateFormat = "yyyy'-'MM'-'dd"
                 let date = dateFormatter.stringFromDate(tempTwo)
-                var filteredDates:[String] = []
+               // var filteredDates:[String] = []
             
                 for item in SingletonB.sharedInstance.sensorLoggingDates{
                     if item  ==  date {
@@ -338,15 +387,17 @@ extension sensorDetails: CVCalendarViewDelegate {
         return shouldShowDaysOut
     }
     
+
     func didSelectDayView(dayView: CVCalendarDayView) {
         var counter = 0
+        print(SingletonB.sharedInstance.sensorLoggingDates)
         SingletonB.sharedInstance.filteredDateIndices.removeAll(keepCapacity: false)
-        let temp = dayView.date
+        //let temp = dayView.date
         let tempTwo = calendarView.presentedDate.convertedDate()!
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy'-'MM'-'dd"
         let date = dateFormatter.stringFromDate(tempTwo)
-        var filteredDates:[String] = []
+       // var filteredDates:[String] = []
         
         for item in SingletonB.sharedInstance.sensorLoggingDates{
             if item  ==  date {
@@ -357,8 +408,6 @@ extension sensorDetails: CVCalendarViewDelegate {
         NSNotificationCenter.defaultCenter().postNotificationName("reloadTableView", object: nil)
     }
 }
-extension sensorDetails: CVCalendarMenuViewDelegate {
-    // firstWeekday() has been already implemented.
-}
+
 
 

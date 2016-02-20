@@ -57,12 +57,14 @@ class newsFeed: UIViewController{
         SingletonB.sharedInstance.sensorNamePayload = sensorName
         SingletonB.sharedInstance.sensorIdPayload = sensorId
         
-        //change VC
+       //change VC
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController: sensorZoom = storyboard.instantiateViewControllerWithIdentifier("sensorZoom") as! sensorZoom
         
         UIApplication.sharedApplication().keyWindow!.rootViewController = viewController
         UIApplication.sharedApplication().keyWindow!.makeKeyAndVisible()
+        
+       // performSegueWithIdentifier("newsToZoom", sender: self)
         
     }
 

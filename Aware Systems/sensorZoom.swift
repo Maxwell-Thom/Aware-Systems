@@ -90,8 +90,13 @@ class sensorZoom: UIViewController, UIPopoverPresentationControllerDelegate {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 // set view to homehub
                 let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("sensorsHome") as! sensorsHome
-                //segue
-                self.presentViewController(destinationViewController, animated: true, completion:nil)
+                
+                let window = UIApplication.sharedApplication().windows[0] as UIWindow;
+                window.rootViewController = destinationViewController;
+                
+                
+                
+                //performSegueWithIdentifier("goHome", sender:self.silenceAlert)
                 // The object has been saved.
                 print("saved!", terminator: "")
             } else {

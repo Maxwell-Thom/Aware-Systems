@@ -32,9 +32,9 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
-        tableView.addSubview(refreshControl)
+        //let refreshControl = UIRefreshControl()
+        //refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
+        //tableView.addSubview(refreshControl)
         
         //call dataquery and populate view upon loading
         self.rows = 0
@@ -52,10 +52,10 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
     }
     
-    func refresh(refreshControl: UIRefreshControl) {
-        viewDidLoad()
-        refreshControl.endRefreshing()
-    }
+    //func refresh(refreshControl: UIRefreshControl) {
+        //viewDidLoad()
+        //refreshControl.endRefreshing()
+    //}
     
     //specify number of rows in table view
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -94,8 +94,20 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
             cell.hubStatus.textColor = UIColor.redColor()
         }
        
+        if(sensorDescription[indexPath.row] == "Liquor Cabinet"){
+            cell.sensorImage.image = UIImage(named: "awaresys_liquor_icon02.jpg")!
+        }
+        else if(sensorDescription[indexPath.row] == "Jewelry Box"){
+            cell.sensorImage.image = UIImage(named: "awaresys_jewelry_icon02.jpg")!
+        }
+        else if(sensorDescription[indexPath.row] == "Firearm"){
+            cell.sensorImage.image = UIImage(named: "awaresys_firearm_icon02.jpg")!
+        }
+        else if(sensorDescription[indexPath.row] == "Medicine Cabinet"){
+            cell.sensorImage.image = UIImage(named: "awaresys_medicine_icon02.jpg")!
+        }
         
-        //set battery status
+        /*set battery status
         if(self.sensorBattery[indexPath.row] == 0)
         {
             cell.sensorBattery.image = UIImage(named: "Empty Battery-32.png")!
@@ -130,7 +142,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
         else if (self.sensorReception[indexPath.row] == 1)
         {
             cell.sensorReception.image = UIImage(named: "Wi-Fi Filled-32.png")!
-        }
+        }*/
         
         
         cell.sensorImage.layer.cornerRadius = 10
@@ -230,6 +242,10 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
     //
     func dataQuery()
     {
+        let seconds = 1.0
+        let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        
         self.hubSelectionLoader = SingletonB.sharedInstance.hubSelected
         var counter: Int = 0
         // Do any additional setup after loading the view, typically from a nib.
@@ -253,6 +269,7 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                         let queryArr = object["Sensors"] as! NSArray
                         //count the array for loop and table size
                         let loopCount = queryArr.count
+                        //print(loopCount)
                         self.rows = loopCount
                         //loop through queryArr
                         while(counter < loopCount){
@@ -266,7 +283,13 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                             //put variables into external variables for later use
                             self.sensorDescription.append(description)
                             self.sensorStatus.append(status)
-                            self.selectedSensorId.append(sensorId)
+                            
+                            //THIS IS SO HACKY FIND OUT WHY THE selectedSensorId array is messed up
+                            if(self.selectedSensorId.count < loopCount){
+                                self.selectedSensorId.append(sensorId)
+                            }
+                            
+                            //print(self.selectedSensorId)
                             self.sensorReception.append(reception)
                             self.sensorBattery.append(battery)
                             self.sensorMovement.append(movement)
@@ -276,9 +299,11 @@ class sensorsHome: UIViewController, UITableViewDelegate, UITableViewDataSource 
                         }
                         
                     }
-                    
-                    //reload table with new data
-                    self.tableView.reloadData()
+                    //THIS IS SO HACKY FIND OUT WHY THE selectedSensorId array is messed up
+                    dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                        //reload table with new data
+                        self.tableView.reloadData()
+                    });
                 }
             }
                 
